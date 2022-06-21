@@ -8,12 +8,14 @@ sealed class Visualizer : MonoBehaviour
     #region Editable attributes
 
     //[SerializeField] ImageSource _source = null;
-    WebCamTexture _source = null;
+    Texture2D _source = null;
     [SerializeField, Range(0, 1)] float _threshold = 0.5f;
     [SerializeField] ResourceSet _resources = null;
     [SerializeField] RawImage _preview = null;
     [SerializeField] Marker _markerPrefab = null;
-    [SerializeField] WebCamera webCamera = null;
+    //[SerializeField] WebCamera webCamera = null;
+    [SerializeField] UVCCamera uvcCamera = null;
+
     #endregion
 
     #region Internal objects
@@ -27,7 +29,8 @@ sealed class Visualizer : MonoBehaviour
 
     void Start()
     {
-        _source = webCamera.CameraTexture;
+        //_source = webCamera.CameraTexture;
+        _source = uvcCamera.tempTexture2D;
         _detector = new ObjectDetector(_resources);
         for (var i = 0; i < _markers.Length; i++)
             _markers[i] = Instantiate(_markerPrefab, _preview.transform);
@@ -57,22 +60,17 @@ sealed class Visualizer : MonoBehaviour
             FpsText.text = frameRate.ToString()+" FPS";
         }
 
-        if(!webCamera.IsCamAvailable)
-        {
-            return;
-        }
-       
         _detector.ProcessImage(_source, _threshold);
 
-        //var i = 0;
-        //foreach (var d in _detector.Detections)
-        //{
-        //    if (i == _markers.Length) break;
-        //    _markers[i++].SetAttributes(d);
-        //}
-        //for (; i < _markers.Length; i++) _markers[i].Hide();
+        var i = 0;
+        foreach (var d in _detector.Detections)
+        {
+            if (i == _markers.Length) break;
+            _markers[i++].SetAttributes(d);
+        }
+        for (; i < _markers.Length; i++) _markers[i].Hide();
 
-        //_preview.texture = _source;
+        _preview.texture = _source;
     }
 
     #endregion

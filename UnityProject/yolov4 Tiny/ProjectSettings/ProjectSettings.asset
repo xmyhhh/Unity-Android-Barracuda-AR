@@ -170,7 +170,7 @@ PlayerSettings:
     tvOS: 0
   overrideDefaultApplicationIdentifier: 1
   AndroidBundleVersionCode: 1
-  AndroidMinSdkVersion: 22
+  AndroidMinSdkVersion: 27
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 1
   aotOptions: 
@@ -258,7 +258,7 @@ PlayerSettings:
   AndroidTargetDevices: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: C:/Users/xmy/Desktop/AndroidKeyStone/user.keystore
+  AndroidKeystoreName: C:/Users/xmyci/Desktop/doubleU/AndroidBuildSetting/Debug.keystore
   AndroidKeyaliasName: xmy
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 0
