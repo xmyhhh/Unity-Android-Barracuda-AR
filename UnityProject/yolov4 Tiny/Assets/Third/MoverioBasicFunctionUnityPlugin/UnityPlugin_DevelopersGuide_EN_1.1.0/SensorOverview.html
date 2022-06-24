@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>SensorOverview</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="./css/base.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/bootstrap.min.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 class="head02-title mt30" id="sensor-control">Sensor Control</h1>
+<p>You can get the data of the sensor mounted on the Moverio headset.</p>
+<h2 class="head02 mt30" id="funtion-list">Funtion list</h2>
+<div class="table_back02 table-responsive mt10">
+<table class="table">
+<thead>
+<tr>
+<th>
+function
+</th>
+<th>
+contents
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+Sensor value acquisition
+</td>
+<td>
+Get the value of the sensor
+</td>
+</tr>
+<tr>
+<td>
+Sensor accuracy acquisition
+</td>
+<td>
+Get sensor accuracy
+</td>
+</tr>
+<tr>
+<td>
+Reconnect
+</td>
+<td>
+Moverio reconnect
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The above function is implemented by SensorControl / SensorControlRotation / SensorControlHeadset / SensorControlUncalibrated of sample scene</p>
+<p><img src="images/device-sensor-scene.jpg" /></p>
+<div class="table_back02 table-responsive mt10">
+<table class="table">
+<thead>
+<tr>
+<th>
+label
+</th>
+<th>
+scene
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+Accelerometer
+</td>
+<td>
+SensorControl
+</td>
+</tr>
+<tr>
+<td>
+Magnetic field
+</td>
+<td>
+SensorControl
+</td>
+</tr>
+<tr>
+<td>
+Gyroscope
+</td>
+<td>
+SensorControl
+</td>
+</tr>
+<tr>
+<td>
+Ambient light
+</td>
+<td>
+SensorControl
+</td>
+</tr>
+<tr>
+<td>
+Gravity
+</td>
+<td>
+SensorControl
+</td>
+</tr>
+<tr>
+<td>
+Linear accelerometer
+</td>
+<td>
+SensorControl
+</td>
+</tr>
+<tr>
+<td>
+Rotation vector
+</td>
+<td>
+SensorControlRotation
+</td>
+</tr>
+<tr>
+<td>
+Game Rotation vector
+</td>
+<td>
+SensorControlRotation
+</td>
+</tr>
+<tr>
+<td>
+Headset Tap Detect
+</td>
+<td>
+SensorControlHeadset
+</td>
+</tr>
+<tr>
+<td>
+Headset Motion Detect
+</td>
+<td>
+SensorControlHeadset
+</td>
+</tr>
+<tr>
+<td>
+Headset Stationary Detect
+</td>
+<td>
+SensorControlHeadset
+</td>
+</tr>
+<tr>
+<td>
+Uncalibrated Accelerometer
+</td>
+<td>
+SensorControlUncalibrated
+</td>
+</tr>
+<tr>
+<td>
+Uncalibrated Magnetic field
+</td>
+<td>
+SensorControlUncalibrated
+</td>
+</tr>
+<tr>
+<td>
+Uncalibrated Gyroscope
+</td>
+<td>
+SensorControlUncalibrated
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Please refer to [Moverio Basic Function SDK Developer’s Guide] for details of the function.</p>
+<h2 class="head02 mt30" id="next-step">Next step</h2>
+<ul>
+<li><a href="./SensorTutorial.html">How to control sensor with Unity app</a></li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>CameraOverview</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="./css/base.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/bootstrap.min.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 class="head02-title mt30" id="camera-control">Camera Control</h1>
+<p>You can control the camera installed in Moverio.</p>
+<h2 class="head02 mt30" id="funtion-list">Funtion list</h2>
+<div class="table_back02 table-responsive mt10">
+<table class="table">
+<thead>
+<tr>
+<th>
+function
+</th>
+<th>
+contents
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+Still image shooting
+</td>
+<td>
+Still image shooting
+</td>
+</tr>
+<tr>
+<td>
+Video shooting
+</td>
+<td>
+Video shooting
+</td>
+</tr>
+<tr>
+<td>
+Preview display
+</td>
+<td>
+Preview display
+</td>
+</tr>
+<tr>
+<td>
+Capture data acquisition
+</td>
+<td>
+Capture data acquisition
+</td>
+</tr>
+<tr>
+<td>
+Brightness control
+</td>
+<td>
+Brightness acquisition / setting
+</td>
+</tr>
+<tr>
+<td>
+Get minimum brightness
+</td>
+<td>
+Get minimum brightness
+</td>
+</tr>
+<tr>
+<td>
+Get maximum brightness
+</td>
+<td>
+Get maximum brightness
+</td>
+</tr>
+<tr>
+<td>
+White balance mode control
+</td>
+<td>
+Get / set white balance mode
+</td>
+</tr>
+<tr>
+<td>
+Gain control
+</td>
+<td>
+Gain acquisition / setting
+</td>
+</tr>
+<tr>
+<td>
+Get maximum gain
+</td>
+<td>
+Get maximum gain
+</td>
+</tr>
+<tr>
+<td>
+Get minimum gain
+</td>
+<td>
+Get minimum gain
+</td>
+</tr>
+<td>
+Focus distance control
+</td>
+<td>
+Focus distance acquisition / setting
+</td>
+</tr>
+<tr>
+<td>
+Get maximum focus distance
+</td>
+<td>
+Get maximum focus distance
+</td>
+</tr>
+<tr>
+<td>
+Get minimum focus distance
+</td>
+<td>
+Get minimum focus distance
+</td>
+</tr>
+<tr>
+<td>
+Exposure compensation mode control
+</td>
+<td>
+Get / set exposure compensation mode
+</td>
+</tr>
+<tr>
+<td>
+Manual exposure compensation step control
+</td>
+<td>
+Get / set manual exposure compensation step
+</td>
+</tr>
+<tr>
+<td>
+Get minimum manual exposure compensation step
+</td>
+<td>
+Get the minimum manual exposure compensation step
+</td>
+</tr>
+<tr>
+<td>
+Get maximum manual exposure compensation step
+</td>
+<td>
+Get maximum manual exposure compensation step
+</td>
+</tr>
+<tr>
+<td>
+Focus mode control
+</td>
+<td>
+Get / set focus mode
+</td>
+</tr>
+<tr>
+<td>
+Resolution control
+</td>
+<td>
+Get / set resolution
+</td>
+</tr>
+<tr>
+<td>
+Power line frequency control
+</td>
+<td>
+Power line frequency acquisition / setting
+</td>
+</tr>
+<tr>
+<td>
+Frame rate control
+</td>
+<td>
+Get / set frame rate
+</td>
+</tr>
+<tr>
+<td>
+Indicator mode control
+</td>
+<td>
+Get / set indicator mode
+</td>
+</tr>
+<tr>
+<td>
+Reconnect
+</td>
+<td>
+Moverio reconnect
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The above function is implemented by CameraControl of sample scene</p>
+<p><img src="images/device-camera-scene2.png" /></p>
+<div class="table_back02 table-responsive mt10">
+<table class="table">
+<thead>
+<tr>
+<th>
+label
+</th>
+<th>
+function
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+Take picture
+</td>
+<td>
+Still image shooting
+</td>
+</tr>
+<tr>
+<td>
+Start/Stop record
+</td>
+<td>
+Video shooting
+</td>
+</tr>
+<tr>
+<td>
+Brightness
+</td>
+<td>
+Brightness control
+</td>
+</tr>
+<tr>
+<td>
+Brightness Min
+</td>
+<td>
+Get minimum brightness
+</td>
+</tr>
+<tr>
+<td>
+Brightness Max
+</td>
+<td>
+Get maximum brightness
+</td>
+</tr>
+<tr>
+<td>
+White balance mode
+</td>
+<td>
+White balance mode control
+</td>
+</tr>
+<tr>
+<td>
+Gain
+</td>
+<td>
+Gain control
+</td>
+</tr>
+<tr>
+<td>
+Gain Min
+</td>
+<td>
+Get minimum gain
+</td>
+</tr>
+<tr>
+<td>
+Gain Max
+</td>
+<td>
+Get maximum gain
+</td>
+</tr>
+<td>
+Focus distance
+</td>
+<td>
+Focus distance control
+</td>
+</tr>
+<tr>
+<td>
+Focus distance Min
+</td>
+<td>
+Get minimum focus distance
+</td>
+</tr>
+<tr>
+<td>
+Focus distance Max
+</td>
+<td>
+Get maximum focus distance
+</td>
+</tr>
+<tr>
+<td>
+Exposure compensation mode
+</td>
+<td>
+Exposure compensation mode control
+</td>
+</tr>
+<tr>
+<td>
+Exposure compensation step
+</td>
+<td>
+Manual exposure compensation step control
+</td>
+</tr>
+<tr>
+<td>
+Exposure compensation step Min
+</td>
+<td>
+Get minimum manual exposure compensation step
+</td>
+</tr>
+<tr>
+<td>
+Exposure compensation step Max
+</td>
+<td>
+Get maximum manual exposure compensation step
+</td>
+</tr>
+<tr>
+<td>
+Focus mode
+</td>
+<td>
+Focus mode control
+</td>
+</tr>
+<tr>
+<td>
+Resolution
+</td>
+<td>
+Resolution control
+</td>
+</tr>
+<tr>
+<td>
+Power line frequency
+</td>
+<td>
+Power line frequency control
+</td>
+</tr>
+<tr>
+<td>
+Farame rate
+</td>
+<td>
+Frame rate control
+</td>
+</tr>
+<tr>
+<td>
+Indicator mode
+</td>
+<td>
+Indicator mode control
+</td>
+</tr>
+<tr>
+<td>
+Reconnect
+</td>
+<td>
+Moverio reconnect
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Please refer to [Moverio Basic Function SDK Developer’s Guide] for details of the function.</p>
+<h2 class="head02 mt30" id="next-step">Next step</h2>
+<ul>
+<li><a href="./CameraTutorial.html">How to control camera with Unity app</a></li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,330 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpKI>
+  <HelpKINode Title="AudioDeviceMode enumeration" Url="html/1aa6ad84-9fdd-2178-4c24-e5c3a066b254.htm" />
+  <HelpKINode Title="Brightness property" Url="html/86517bc3-a5fd-e188-5ca7-daeb2036236b.htm" />
+  <HelpKINode Title="BrightnessMax property" Url="html/32fc6d3d-3d8f-d194-5b07-8c1bcee8aff5.htm" />
+  <HelpKINode Title="BrightnessMin property" Url="html/6e790036-60b1-a461-fb2d-92ed97b1c97d.htm" />
+  <HelpKINode Title="BrightnessMode enumeration" Url="html/cf78cbc9-cd00-5995-54b4-86a903116c1a.htm" />
+  <HelpKINode Title="BRIGHTNESS_MODE_AUTO enumeration member" Url="html/cf78cbc9-cd00-5995-54b4-86a903116c1a.htm" />
+  <HelpKINode Title="BRIGHTNESS_MODE_MANUAL enumeration member" Url="html/cf78cbc9-cd00-5995-54b4-86a903116c1a.htm" />
+  <HelpKINode Title="CameraPreviewRenderTexture field" Url="html/a4592ba6-ab05-e08c-62e9-42663af81383.htm" />
+  <HelpKINode Title="CameraProperty class">
+    <HelpKINode Title="CameraProperty Class" Url="html/da92f799-a9cc-4781-1b3a-7ae250e6d03c.htm" />
+    <HelpKINode Title="properties" Url="html/ad347d92-fd6d-c404-e89a-ae80dd8ba468.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CameraProperty.Brightness property" Url="html/86517bc3-a5fd-e188-5ca7-daeb2036236b.htm" />
+  <HelpKINode Title="CameraProperty.BrightnessMax property" Url="html/32fc6d3d-3d8f-d194-5b07-8c1bcee8aff5.htm" />
+  <HelpKINode Title="CameraProperty.BrightnessMin property" Url="html/6e790036-60b1-a461-fb2d-92ed97b1c97d.htm" />
+  <HelpKINode Title="CameraProperty.CaptureFps property" Url="html/4134f820-dcb3-cbc5-badd-f999f273e092.htm" />
+  <HelpKINode Title="CameraProperty.CaptureSize property" Url="html/b763ab96-1084-7ac6-3c04-767147992ca8.htm" />
+  <HelpKINode Title="CameraProperty.ExposureMode property" Url="html/8d518718-bb77-1410-6091-574966a92109.htm" />
+  <HelpKINode Title="CameraProperty.ExposureStep property" Url="html/c2372628-ff79-4cf5-4798-c1ffebd999fe.htm" />
+  <HelpKINode Title="CameraProperty.ExposureStepMax property" Url="html/3246c9e7-a277-2b51-8c10-c18f450ed5a0.htm" />
+  <HelpKINode Title="CameraProperty.ExposureStepMin property" Url="html/378fe0e2-040e-a6ad-6412-4aac55b9e15b.htm" />
+  <HelpKINode Title="CameraProperty.FocusDistance property" Url="html/dc53cd7b-55a3-a530-27b2-8b62af2476f9.htm" />
+  <HelpKINode Title="CameraProperty.FocusDistanceMax property" Url="html/17b0604c-df27-4458-f20a-11c7077f4fb7.htm" />
+  <HelpKINode Title="CameraProperty.FocusDistanceMin property" Url="html/b7e01479-dce7-8185-091d-b8b020a3ba68.htm" />
+  <HelpKINode Title="CameraProperty.FocusMode property" Url="html/8c2815cc-897b-69e1-7c2e-ca9e7342d840.htm" />
+  <HelpKINode Title="CameraProperty.Gain property" Url="html/35a62d47-07d0-0bf5-4f55-70c9224f0c3d.htm" />
+  <HelpKINode Title="CameraProperty.GainMax property" Url="html/7a168a57-2451-41da-0901-a6dc106dd01d.htm" />
+  <HelpKINode Title="CameraProperty.GainMin property" Url="html/91774582-ccf7-fc96-60b1-dbce1994561a.htm" />
+  <HelpKINode Title="CameraProperty.IndicatorMode property" Url="html/26ecc7ac-10ab-d6a7-59a8-edaa1cb14923.htm" />
+  <HelpKINode Title="CameraProperty.PowerLineFrequencyControlMode property" Url="html/7010ed79-2a16-0e2c-d78c-271fb6b44772.htm" />
+  <HelpKINode Title="CameraProperty.WhiteBalanceMode property" Url="html/4916636b-1fad-835c-3837-d8745db2486b.htm" />
+  <HelpKINode Title="CaptureFps enumeration" Url="html/c278fe59-9bdb-4017-e83b-ffadf3db7b7c.htm" />
+  <HelpKINode Title="CaptureFps property" Url="html/4134f820-dcb3-cbc5-badd-f999f273e092.htm" />
+  <HelpKINode Title="CaptureSize enumeration" Url="html/21c47085-8f9e-6b25-84a1-003ef029404a.htm" />
+  <HelpKINode Title="CaptureSize property" Url="html/b763ab96-1084-7ac6-3c04-767147992ca8.htm" />
+  <HelpKINode Title="CAPTURE_FPS_10 enumeration member" Url="html/c278fe59-9bdb-4017-e83b-ffadf3db7b7c.htm" />
+  <HelpKINode Title="CAPTURE_FPS_15 enumeration member" Url="html/c278fe59-9bdb-4017-e83b-ffadf3db7b7c.htm" />
+  <HelpKINode Title="CAPTURE_FPS_20 enumeration member" Url="html/c278fe59-9bdb-4017-e83b-ffadf3db7b7c.htm" />
+  <HelpKINode Title="CAPTURE_FPS_30 enumeration member" Url="html/c278fe59-9bdb-4017-e83b-ffadf3db7b7c.htm" />
+  <HelpKINode Title="CAPTURE_FPS_60 enumeration member" Url="html/c278fe59-9bdb-4017-e83b-ffadf3db7b7c.htm" />
+  <HelpKINode Title="CAPTURE_SIZE_1280x720 enumeration member" Url="html/21c47085-8f9e-6b25-84a1-003ef029404a.htm" />
+  <HelpKINode Title="CAPTURE_SIZE_1600x1200 enumeration member" Url="html/21c47085-8f9e-6b25-84a1-003ef029404a.htm" />
+  <HelpKINode Title="CAPTURE_SIZE_1920x1080 enumeration member" Url="html/21c47085-8f9e-6b25-84a1-003ef029404a.htm" />
+  <HelpKINode Title="CAPTURE_SIZE_2560x1440 enumeration member" Url="html/21c47085-8f9e-6b25-84a1-003ef029404a.htm" />
+  <HelpKINode Title="CAPTURE_SIZE_2592x1944 enumeration member" Url="html/21c47085-8f9e-6b25-84a1-003ef029404a.htm" />
+  <HelpKINode Title="CAPTURE_SIZE_3264x2448 enumeration member" Url="html/21c47085-8f9e-6b25-84a1-003ef029404a.htm" />
+  <HelpKINode Title="CAPTURE_SIZE_640x480 enumeration member" Url="html/21c47085-8f9e-6b25-84a1-003ef029404a.htm" />
+  <HelpKINode Title="DEVICE_MODE_AUDIO_JACK enumeration member" Url="html/1aa6ad84-9fdd-2178-4c24-e5c3a066b254.htm" />
+  <HelpKINode Title="DEVICE_MODE_BUILTIN_AUDIO enumeration member" Url="html/1aa6ad84-9fdd-2178-4c24-e5c3a066b254.htm" />
+  <HelpKINode Title="DEVICE_MODE_UNKNOWN enumeration member" Url="html/1aa6ad84-9fdd-2178-4c24-e5c3a066b254.htm" />
+  <HelpKINode Title="DisplayMode enumeration" Url="html/dfbe023d-8efc-30c9-50b5-c4f299f51981.htm" />
+  <HelpKINode Title="DisplayState enumeration" Url="html/fd9a1008-d886-3c8c-377e-62843555f5e3.htm" />
+  <HelpKINode Title="DISPLAY_MODE_2D enumeration member" Url="html/dfbe023d-8efc-30c9-50b5-c4f299f51981.htm" />
+  <HelpKINode Title="DISPLAY_MODE_3D enumeration member" Url="html/dfbe023d-8efc-30c9-50b5-c4f299f51981.htm" />
+  <HelpKINode Title="DISPLAY_STATE_OFF enumeration member" Url="html/fd9a1008-d886-3c8c-377e-62843555f5e3.htm" />
+  <HelpKINode Title="DISPLAY_STATE_ON enumeration member" Url="html/fd9a1008-d886-3c8c-377e-62843555f5e3.htm" />
+  <HelpKINode Title="ExposureMode enumeration" Url="html/a68c852b-7501-958d-cfec-ad93dca6fb65.htm" />
+  <HelpKINode Title="ExposureMode property" Url="html/8d518718-bb77-1410-6091-574966a92109.htm" />
+  <HelpKINode Title="ExposureStep property" Url="html/c2372628-ff79-4cf5-4798-c1ffebd999fe.htm" />
+  <HelpKINode Title="ExposureStepMax property" Url="html/3246c9e7-a277-2b51-8c10-c18f450ed5a0.htm" />
+  <HelpKINode Title="ExposureStepMin property" Url="html/378fe0e2-040e-a6ad-6412-4aac55b9e15b.htm" />
+  <HelpKINode Title="EXPOSURE_MODE_AUTO enumeration member" Url="html/a68c852b-7501-958d-cfec-ad93dca6fb65.htm" />
+  <HelpKINode Title="EXPOSURE_MODE_MANUAL enumeration member" Url="html/a68c852b-7501-958d-cfec-ad93dca6fb65.htm" />
+  <HelpKINode Title="EXPOSURE_MODE_UNKNOWN enumeration member" Url="html/a68c852b-7501-958d-cfec-ad93dca6fb65.htm" />
+  <HelpKINode Title="FocusDistance property" Url="html/dc53cd7b-55a3-a530-27b2-8b62af2476f9.htm" />
+  <HelpKINode Title="FocusDistanceMax property" Url="html/17b0604c-df27-4458-f20a-11c7077f4fb7.htm" />
+  <HelpKINode Title="FocusDistanceMin property" Url="html/b7e01479-dce7-8185-091d-b8b020a3ba68.htm" />
+  <HelpKINode Title="FocusMode enumeration" Url="html/0804d1f3-cf49-fd77-2cbe-c965675b378c.htm" />
+  <HelpKINode Title="FocusMode property" Url="html/8c2815cc-897b-69e1-7c2e-ca9e7342d840.htm" />
+  <HelpKINode Title="FOCUS_MODE_AUTO enumeration member" Url="html/0804d1f3-cf49-fd77-2cbe-c965675b378c.htm" />
+  <HelpKINode Title="FOCUS_MODE_MANUAL enumeration member" Url="html/0804d1f3-cf49-fd77-2cbe-c965675b378c.htm" />
+  <HelpKINode Title="FOCUS_MODE_OFF enumeration member" Url="html/0804d1f3-cf49-fd77-2cbe-c965675b378c.htm" />
+  <HelpKINode Title="FOCUS_MODE_UNKNOWN enumeration member" Url="html/0804d1f3-cf49-fd77-2cbe-c965675b378c.htm" />
+  <HelpKINode Title="Gain property" Url="html/35a62d47-07d0-0bf5-4f55-70c9224f0c3d.htm" />
+  <HelpKINode Title="GainMax property" Url="html/7a168a57-2451-41da-0901-a6dc106dd01d.htm" />
+  <HelpKINode Title="GainMin property" Url="html/91774582-ccf7-fc96-60b1-dbce1994561a.htm" />
+  <HelpKINode Title="GetAcc method" Url="html/25bdc411-0ef4-ea5b-f1f2-392cf66812e0.htm" />
+  <HelpKINode Title="GetAccAccuracy method" Url="html/f29baa3a-1b05-604f-69f1-8326df3ad09c.htm" />
+  <HelpKINode Title="GetAccUncalibrated method" Url="html/5405862e-463f-e6f9-8ecc-d81d24f06ba5.htm" />
+  <HelpKINode Title="GetAccUncalibratedAccuracy method" Url="html/057c4a0c-5cd9-2693-8126-6792cf11da05.htm" />
+  <HelpKINode Title="GetBrightness method" Url="html/70477d9c-654d-f3f1-2b1c-e1a4518110f4.htm" />
+  <HelpKINode Title="GetBrightnessMode method" Url="html/7cbc2021-acea-653b-cd1f-a9efbf523b9f.htm" />
+  <HelpKINode Title="GetDeviceMode method" Url="html/73447469-8cbb-7f78-a292-131af91578db.htm" />
+  <HelpKINode Title="GetDisplayMode method" Url="html/adaa0484-2e01-6399-c67f-0d9abb13a3da.htm" />
+  <HelpKINode Title="GetDisplayState method" Url="html/29296d92-34c4-75f6-60e4-a3600db450ea.htm" />
+  <HelpKINode Title="GetGainStep method" Url="html/507a4886-e201-e927-a576-ebfb53b264a7.htm" />
+  <HelpKINode Title="GetGainStepMax method" Url="html/2d44e9ee-c33a-6845-c4ae-19c9e1c3b9de.htm" />
+  <HelpKINode Title="GetGainStepMin method" Url="html/17773b1d-4d10-b3e4-c2e9-0f59a2b2426a.htm" />
+  <HelpKINode Title="GetGameRotation method" Url="html/70722e8e-53b3-c7e8-8ecf-16fa0f25de14.htm" />
+  <HelpKINode Title="GetGameRotationAccuracy method" Url="html/87f12d07-ad71-e39d-ece6-414a9efd076b.htm" />
+  <HelpKINode Title="GetGravity method" Url="html/5b8baf10-e4a2-7e2d-3eb0-2d967a6a03ae.htm" />
+  <HelpKINode Title="GetGravityAccuracy method" Url="html/4e853056-8eb0-00e3-042b-5cf5d40ff07f.htm" />
+  <HelpKINode Title="GetGyro method" Url="html/8bf852bb-a7d4-9904-bd0a-78af43cbceae.htm" />
+  <HelpKINode Title="GetGyroAccuracy method" Url="html/daed1cdb-02b6-17de-367a-1d58ed0959be.htm" />
+  <HelpKINode Title="GetGyroUncalibrated method" Url="html/f5f31cc8-339d-8587-a4c2-976a82c41e66.htm" />
+  <HelpKINode Title="GetGyroUncalibratedAccuracy method" Url="html/bdfd8f78-342f-15fd-411c-da84bb0164ca.htm" />
+  <HelpKINode Title="GetHeadsetProductName method" Url="html/5596a2fa-f364-568b-989f-72383b8e0e3e.htm" />
+  <HelpKINode Title="GetHeadsetSerialNumber method" Url="html/e1ff144a-fa88-83af-ca17-57fbdeb85fcb.htm" />
+  <HelpKINode Title="GetLight method" Url="html/cc8e0da1-9cd4-c9cc-ff9b-e541694b93bd.htm" />
+  <HelpKINode Title="GetLightAccuracy method" Url="html/4c0ef8ce-1032-47a2-83c1-59a9f9a6d177.htm" />
+  <HelpKINode Title="GetLinearAcc method" Url="html/167c692d-8a8f-16ba-b7da-778361fa8ae2.htm" />
+  <HelpKINode Title="GetLinearAccAccuracy method" Url="html/91c32ce2-99a8-1628-29cd-b80e468f4052.htm" />
+  <HelpKINode Title="GetMag method" Url="html/8145d752-5beb-86f2-a47a-5dd0705be9de.htm" />
+  <HelpKINode Title="GetMagAccuracy method" Url="html/754f0d1b-a4e3-b859-9736-7a345f8b8530.htm" />
+  <HelpKINode Title="GetMagUncalibrated method" Url="html/5cec85ee-29db-f9db-4208-843bf2395f56.htm" />
+  <HelpKINode Title="GetMagUncalibratedAccuracy method" Url="html/9f235e7b-6d0c-4b51-3d3a-5fe61ffb950d.htm" />
+  <HelpKINode Title="GetProperty method" Url="html/573221ee-66e3-98c7-fa75-c3f028c89788.htm" />
+  <HelpKINode Title="GetRotation method" Url="html/eaabad26-cc03-25d2-8636-de911e01ac0b.htm" />
+  <HelpKINode Title="GetRotationAccuracy method" Url="html/3714b2b7-1158-a2f6-9d4a-188cc700460e.htm" />
+  <HelpKINode Title="GetScreenHorizontalShiftStep method" Url="html/711ec849-0428-cf37-6070-32c06d2cef88.htm" />
+  <HelpKINode Title="GetScreenHorizontalShiftStepMax method" Url="html/bf280785-4d1d-aab6-f4da-00bf981a2ed3.htm" />
+  <HelpKINode Title="GetScreenHorizontalShiftStepMin method" Url="html/550f44b4-41cc-918a-9349-6ed2b8c45b97.htm" />
+  <HelpKINode Title="GetVolume method" Url="html/2d44e5bd-387b-58ac-4916-bc6094918b89.htm" />
+  <HelpKINode Title="GetVolumeMax method" Url="html/e33ab43e-6542-7aed-8f19-2c095c15f3de.htm" />
+  <HelpKINode Title="GetVolumeMin method" Url="html/61b220e0-a242-081c-1acf-bd9e5d4ecadb.htm" />
+  <HelpKINode Title="IndicatorMode enumeration" Url="html/b2915453-f155-f311-6c02-89432a56fcb3.htm" />
+  <HelpKINode Title="IndicatorMode property" Url="html/26ecc7ac-10ab-d6a7-59a8-edaa1cb14923.htm" />
+  <HelpKINode Title="INDICATOR_MODE_AUTO enumeration member" Url="html/b2915453-f155-f311-6c02-89432a56fcb3.htm" />
+  <HelpKINode Title="INDICATOR_MODE_OFF enumeration member" Url="html/b2915453-f155-f311-6c02-89432a56fcb3.htm" />
+  <HelpKINode Title="INDICATOR_MODE_ON enumeration member" Url="html/b2915453-f155-f311-6c02-89432a56fcb3.htm" />
+  <HelpKINode Title="INDICATOR_MODE_UNKNOWN enumeration member" Url="html/b2915453-f155-f311-6c02-89432a56fcb3.htm" />
+  <HelpKINode Title="IsActive method">
+    <HelpKINode Title="MoverioAudio.IsActive Method " Url="html/5def51b3-4a35-a41c-7209-60946ad2eae6.htm" />
+    <HelpKINode Title="MoverioCamera.IsActive Method " Url="html/15faa54c-d4b7-d7b7-b25c-6c41397f2db8.htm" />
+    <HelpKINode Title="MoverioDisplay.IsActive Method " Url="html/552149c3-9d94-36f1-0de3-98cbfb7dc7ba.htm" />
+    <HelpKINode Title="MoverioInfo.IsActive Method " Url="html/0f0a7068-aa99-8090-b60b-4383c4d05938.htm" />
+    <HelpKINode Title="MoverioInput.IsActive Method " Url="html/f181494c-f0a8-8354-8517-4c364a2b6e82.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IsHeadsetAttached method" Url="html/c5da097b-ae0b-539a-c871-e1e498002bdd.htm" />
+  <HelpKINode Title="MoverioAudio class">
+    <HelpKINode Title="MoverioAudio Class" Url="html/9e74f71a-f151-5bba-2f28-c3af143ac77e.htm" />
+    <HelpKINode Title="constructor" Url="html/2546efc2-2e2b-3990-2a13-b71c06bf4afe.htm" />
+    <HelpKINode Title="methods" Url="html/e01015ee-1001-1119-a5e1-32f56aae9ea0.htm" />
+  </HelpKINode>
+  <HelpKINode Title="MoverioAudio.GetDeviceMode method" Url="html/73447469-8cbb-7f78-a292-131af91578db.htm" />
+  <HelpKINode Title="MoverioAudio.GetGainStep method" Url="html/507a4886-e201-e927-a576-ebfb53b264a7.htm" />
+  <HelpKINode Title="MoverioAudio.GetGainStepMax method" Url="html/2d44e9ee-c33a-6845-c4ae-19c9e1c3b9de.htm" />
+  <HelpKINode Title="MoverioAudio.GetGainStepMin method" Url="html/17773b1d-4d10-b3e4-c2e9-0f59a2b2426a.htm" />
+  <HelpKINode Title="MoverioAudio.GetVolume method" Url="html/2d44e5bd-387b-58ac-4916-bc6094918b89.htm" />
+  <HelpKINode Title="MoverioAudio.GetVolumeMax method" Url="html/e33ab43e-6542-7aed-8f19-2c095c15f3de.htm" />
+  <HelpKINode Title="MoverioAudio.GetVolumeMin method" Url="html/61b220e0-a242-081c-1acf-bd9e5d4ecadb.htm" />
+  <HelpKINode Title="MoverioAudio.IsActive method" Url="html/5def51b3-4a35-a41c-7209-60946ad2eae6.htm" />
+  <HelpKINode Title="MoverioAudio.MoverioAudio constructor" Url="html/2546efc2-2e2b-3990-2a13-b71c06bf4afe.htm" />
+  <HelpKINode Title="MoverioAudio.Reconnect method" Url="html/6d1f04f0-3c5e-53e6-b6e9-ed615933d413.htm" />
+  <HelpKINode Title="MoverioAudio.SetDeviceMode method" Url="html/0bf35ffb-8fe7-07ff-fb29-6d9a9e5fc0b9.htm" />
+  <HelpKINode Title="MoverioAudio.SetGainStep method" Url="html/aa1ae8a4-cc65-fff7-b9ab-2dbf372e4898.htm" />
+  <HelpKINode Title="MoverioAudio.SetVolume method" Url="html/3ee5e05b-57c4-e1b9-3478-be8daa700c0b.htm" />
+  <HelpKINode Title="MoverioAudio.SetVolumeLimitMode method" Url="html/008a01a4-20d9-4410-aefd-253f2379cd09.htm" />
+  <HelpKINode Title="MoverioBasicFunctionUnityPlugin namespace" Url="html/251b87f8-6d9a-6055-390f-8c61a23f443b.htm" />
+  <HelpKINode Title="MoverioBasicFunctionUnityPlugin.CameraProperty class" Url="html/da92f799-a9cc-4781-1b3a-7ae250e6d03c.htm" />
+  <HelpKINode Title="MoverioBasicFunctionUnityPlugin.MoverioAudio class" Url="html/9e74f71a-f151-5bba-2f28-c3af143ac77e.htm" />
+  <HelpKINode Title="MoverioBasicFunctionUnityPlugin.MoverioCamera class" Url="html/3d59938b-003a-0606-141c-b39846dab38f.htm" />
+  <HelpKINode Title="MoverioBasicFunctionUnityPlugin.MoverioCamera.CaptureDataHandler class" Url="html/aa315f3f-6da9-c31c-b419-23c7fe598ca5.htm" />
+  <HelpKINode Title="MoverioBasicFunctionUnityPlugin.MoverioCamera.SetPropertyCompletedHandler class" Url="html/b9a64ad0-9b90-1b1f-72ba-9e31ae7f9823.htm" />
+  <HelpKINode Title="MoverioBasicFunctionUnityPlugin.MoverioDisplay class" Url="html/dc355979-014a-5769-76bd-bd9ff98d43e7.htm" />
+  <HelpKINode Title="MoverioBasicFunctionUnityPlugin.MoverioInfo class" Url="html/665c29fc-e0d8-cfd8-08c4-0396ab3cbd7a.htm" />
+  <HelpKINode Title="MoverioBasicFunctionUnityPlugin.MoverioInput class" Url="html/a82e014e-0c4f-cbe5-0cab-125504073624.htm" />
+  <HelpKINode Title="MoverioBasicFunctionUnityPlugin.MoverioInput.HeadsetDetectHandler class" Url="html/81871233-b493-fcbf-3caa-9b589c1125f8.htm" />
+  <HelpKINode Title="MoverioBasicFunctionUnityPlugin.Type namespace" Url="html/1d6e11ea-6b08-6c3f-f513-2a0c0e03ee1a.htm" />
+  <HelpKINode Title="MoverioBasicFunctionUnityPlugin.Type.AudioDeviceMode enumeration" Url="html/1aa6ad84-9fdd-2178-4c24-e5c3a066b254.htm" />
+  <HelpKINode Title="MoverioBasicFunctionUnityPlugin.Type.BrightnessMode enumeration" Url="html/cf78cbc9-cd00-5995-54b4-86a903116c1a.htm" />
+  <HelpKINode Title="MoverioBasicFunctionUnityPlugin.Type.CaptureFps enumeration" Url="html/c278fe59-9bdb-4017-e83b-ffadf3db7b7c.htm" />
+  <HelpKINode Title="MoverioBasicFunctionUnityPlugin.Type.CaptureSize enumeration" Url="html/21c47085-8f9e-6b25-84a1-003ef029404a.htm" />
+  <HelpKINode Title="MoverioBasicFunctionUnityPlugin.Type.DisplayMode enumeration" Url="html/dfbe023d-8efc-30c9-50b5-c4f299f51981.htm" />
+  <HelpKINode Title="MoverioBasicFunctionUnityPlugin.Type.DisplayState enumeration" Url="html/fd9a1008-d886-3c8c-377e-62843555f5e3.htm" />
+  <HelpKINode Title="MoverioBasicFunctionUnityPlugin.Type.ExposureMode enumeration" Url="html/a68c852b-7501-958d-cfec-ad93dca6fb65.htm" />
+  <HelpKINode Title="MoverioBasicFunctionUnityPlugin.Type.FocusMode enumeration" Url="html/0804d1f3-cf49-fd77-2cbe-c965675b378c.htm" />
+  <HelpKINode Title="MoverioBasicFunctionUnityPlugin.Type.IndicatorMode enumeration" Url="html/b2915453-f155-f311-6c02-89432a56fcb3.htm" />
+  <HelpKINode Title="MoverioBasicFunctionUnityPlugin.Type.PowerLineFrequencyControlMode enumeration" Url="html/0b8cb044-9854-39bc-0423-aabc688119e4.htm" />
+  <HelpKINode Title="MoverioBasicFunctionUnityPlugin.Type.SensorDataAccuracy enumeration" Url="html/8b274639-dc5b-efc8-8961-0a29bb2ab240.htm" />
+  <HelpKINode Title="MoverioBasicFunctionUnityPlugin.Type.VolumeLimitMode enumeration" Url="html/c1c29047-e4ca-d895-dbff-81ba72007963.htm" />
+  <HelpKINode Title="MoverioBasicFunctionUnityPlugin.Type.WhiteBalanceMode enumeration" Url="html/3b38c2bc-6719-cc12-7b9b-34d1eae69450.htm" />
+  <HelpKINode Title="MoverioCamera class">
+    <HelpKINode Title="MoverioCamera Class" Url="html/3d59938b-003a-0606-141c-b39846dab38f.htm" />
+    <HelpKINode Title="constructor" Url="html/eca7b9b4-a13f-c742-9814-15b05f899c76.htm" />
+    <HelpKINode Title="fields" Url="html/7314aa63-fd7f-656a-c45b-bc0c2c92495b.htm" />
+    <HelpKINode Title="methods" Url="html/cfa44860-88b3-5dc0-0c38-b4b7582819a7.htm" />
+  </HelpKINode>
+  <HelpKINode Title="MoverioCamera.CameraPreviewRenderTexture field" Url="html/a4592ba6-ab05-e08c-62e9-42663af81383.htm" />
+  <HelpKINode Title="MoverioCamera.CaptureDataHandler class">
+    <HelpKINode Title="MoverioCamera.CaptureDataHandler Class" Url="html/aa315f3f-6da9-c31c-b419-23c7fe598ca5.htm" />
+    <HelpKINode Title="constructor" Url="html/4c5f6153-7881-e48d-a8fb-62ecfad78c41.htm" />
+  </HelpKINode>
+  <HelpKINode Title="MoverioCamera.CaptureDataHandler.CaptureDataHandler constructor" Url="html/4c5f6153-7881-e48d-a8fb-62ecfad78c41.htm" />
+  <HelpKINode Title="MoverioCamera.GetProperty method" Url="html/573221ee-66e3-98c7-fa75-c3f028c89788.htm" />
+  <HelpKINode Title="MoverioCamera.IsActive method" Url="html/15faa54c-d4b7-d7b7-b25c-6c41397f2db8.htm" />
+  <HelpKINode Title="MoverioCamera.MoverioCamera constructor" Url="html/eca7b9b4-a13f-c742-9814-15b05f899c76.htm" />
+  <HelpKINode Title="MoverioCamera.OnCaptureData field" Url="html/159c6715-e137-f056-2726-f478a3c6b40d.htm" />
+  <HelpKINode Title="MoverioCamera.OnPictureCompleted field" Url="html/d193c3cc-63e7-e4dc-14cd-2151a6e7f0ce.htm" />
+  <HelpKINode Title="MoverioCamera.OnRecordStarted field" Url="html/8e839ed3-2d59-aa5c-e256-8c9d45c73870.htm" />
+  <HelpKINode Title="MoverioCamera.OnRecordStopped field" Url="html/b1fe249f-263a-8924-0518-d724b74f81d7.htm" />
+  <HelpKINode Title="MoverioCamera.OnSetPropertyCompleted field" Url="html/61a4e5cb-8c9c-ab1b-1768-a7c13bffa306.htm" />
+  <HelpKINode Title="MoverioCamera.Reconnect method" Url="html/254fab1e-2f68-9338-6380-b7729e740ee6.htm" />
+  <HelpKINode Title="MoverioCamera.SetProperty method" Url="html/1e07389a-9690-c69d-0ac7-1f94a8e4562a.htm" />
+  <HelpKINode Title="MoverioCamera.SetPropertyCompletedHandler class">
+    <HelpKINode Title="MoverioCamera.SetPropertyCompletedHandler Class" Url="html/b9a64ad0-9b90-1b1f-72ba-9e31ae7f9823.htm" />
+    <HelpKINode Title="constructor" Url="html/3b2a05e5-fcd8-9a64-3728-c88a7e26c240.htm" />
+  </HelpKINode>
+  <HelpKINode Title="MoverioCamera.SetPropertyCompletedHandler.SetPropertyCompletedHandler constructor" Url="html/3b2a05e5-fcd8-9a64-3728-c88a7e26c240.htm" />
+  <HelpKINode Title="MoverioCamera.StartRecord method" Url="html/b23c0c43-2d0f-f5f9-b49d-6e8221169fdb.htm" />
+  <HelpKINode Title="MoverioCamera.StopRecord method" Url="html/caf302c8-e33c-a5fa-7d5a-26385a66e1a7.htm" />
+  <HelpKINode Title="MoverioCamera.TakePicture method" Url="html/7c664032-3f87-6947-bc1b-c7e4ac01fec5.htm" />
+  <HelpKINode Title="MoverioDisplay class">
+    <HelpKINode Title="MoverioDisplay Class" Url="html/dc355979-014a-5769-76bd-bd9ff98d43e7.htm" />
+    <HelpKINode Title="constructor" Url="html/973e6517-612f-1744-16f8-a818107d600c.htm" />
+    <HelpKINode Title="methods" Url="html/32402ddf-3d63-b731-a5eb-f486d1186691.htm" />
+  </HelpKINode>
+  <HelpKINode Title="MoverioDisplay.GetBrightness method" Url="html/70477d9c-654d-f3f1-2b1c-e1a4518110f4.htm" />
+  <HelpKINode Title="MoverioDisplay.GetBrightnessMode method" Url="html/7cbc2021-acea-653b-cd1f-a9efbf523b9f.htm" />
+  <HelpKINode Title="MoverioDisplay.GetDisplayMode method" Url="html/adaa0484-2e01-6399-c67f-0d9abb13a3da.htm" />
+  <HelpKINode Title="MoverioDisplay.GetDisplayState method" Url="html/29296d92-34c4-75f6-60e4-a3600db450ea.htm" />
+  <HelpKINode Title="MoverioDisplay.GetScreenHorizontalShiftStep method" Url="html/711ec849-0428-cf37-6070-32c06d2cef88.htm" />
+  <HelpKINode Title="MoverioDisplay.GetScreenHorizontalShiftStepMax method" Url="html/bf280785-4d1d-aab6-f4da-00bf981a2ed3.htm" />
+  <HelpKINode Title="MoverioDisplay.GetScreenHorizontalShiftStepMin method" Url="html/550f44b4-41cc-918a-9349-6ed2b8c45b97.htm" />
+  <HelpKINode Title="MoverioDisplay.IsActive method" Url="html/552149c3-9d94-36f1-0de3-98cbfb7dc7ba.htm" />
+  <HelpKINode Title="MoverioDisplay.MoverioDisplay constructor" Url="html/973e6517-612f-1744-16f8-a818107d600c.htm" />
+  <HelpKINode Title="MoverioDisplay.Reconnect method" Url="html/c9feb789-8a24-13d7-35ea-e38c17dacbd4.htm" />
+  <HelpKINode Title="MoverioDisplay.SetBrightness method" Url="html/e773ea5e-559f-6806-f50f-4ffa1c262e5d.htm" />
+  <HelpKINode Title="MoverioDisplay.SetBrightnessMode method" Url="html/d1b08128-4bee-4916-fcab-23e0cdc70133.htm" />
+  <HelpKINode Title="MoverioDisplay.SetDisplayMode method" Url="html/ba24d0e0-32b6-494c-da22-f2afa955631a.htm" />
+  <HelpKINode Title="MoverioDisplay.SetDisplayState method" Url="html/c5dfc213-f80d-cd83-89a6-464268524fd3.htm" />
+  <HelpKINode Title="MoverioDisplay.SetScreenHorizontalShiftStep method" Url="html/9e1405a7-4e4f-364b-1c0d-803e664e85a7.htm" />
+  <HelpKINode Title="MoverioInfo class">
+    <HelpKINode Title="MoverioInfo Class" Url="html/665c29fc-e0d8-cfd8-08c4-0396ab3cbd7a.htm" />
+    <HelpKINode Title="constructor" Url="html/d09ae641-ad4f-7729-5aae-d576dbe70786.htm" />
+    <HelpKINode Title="fields" Url="html/4041944e-dbb0-a655-ad45-fe31c3e86891.htm" />
+    <HelpKINode Title="methods" Url="html/6f8b6784-6bdb-3245-1972-d0dde579a121.htm" />
+  </HelpKINode>
+  <HelpKINode Title="MoverioInfo.GetHeadsetProductName method" Url="html/5596a2fa-f364-568b-989f-72383b8e0e3e.htm" />
+  <HelpKINode Title="MoverioInfo.GetHeadsetSerialNumber method" Url="html/e1ff144a-fa88-83af-ca17-57fbdeb85fcb.htm" />
+  <HelpKINode Title="MoverioInfo.IsActive method" Url="html/0f0a7068-aa99-8090-b60b-4383c4d05938.htm" />
+  <HelpKINode Title="MoverioInfo.IsHeadsetAttached method" Url="html/c5da097b-ae0b-539a-c871-e1e498002bdd.htm" />
+  <HelpKINode Title="MoverioInfo.MoverioInfo constructor" Url="html/d09ae641-ad4f-7729-5aae-d576dbe70786.htm" />
+  <HelpKINode Title="MoverioInfo.OnHeadsetAttached field" Url="html/ac6d1467-af78-e0e0-03db-0dbaaa3924ad.htm" />
+  <HelpKINode Title="MoverioInfo.OnHeadsetDetached field" Url="html/32b9b994-c207-300e-4650-36e80a10d255.htm" />
+  <HelpKINode Title="MoverioInfo.Reconnect method" Url="html/a3136fd9-76b2-f2b1-7434-528ab6c98f7f.htm" />
+  <HelpKINode Title="MoverioInput class">
+    <HelpKINode Title="MoverioInput Class" Url="html/a82e014e-0c4f-cbe5-0cab-125504073624.htm" />
+    <HelpKINode Title="constructor" Url="html/ca5ea174-ba7f-6ef4-1958-7e0aa41bb881.htm" />
+    <HelpKINode Title="fields" Url="html/89de958f-4fbf-630f-c105-214305960d3d.htm" />
+    <HelpKINode Title="methods" Url="html/976a4c51-a480-58c6-be76-2eef65f89733.htm" />
+  </HelpKINode>
+  <HelpKINode Title="MoverioInput.GetAcc method" Url="html/25bdc411-0ef4-ea5b-f1f2-392cf66812e0.htm" />
+  <HelpKINode Title="MoverioInput.GetAccAccuracy method" Url="html/f29baa3a-1b05-604f-69f1-8326df3ad09c.htm" />
+  <HelpKINode Title="MoverioInput.GetAccUncalibrated method" Url="html/5405862e-463f-e6f9-8ecc-d81d24f06ba5.htm" />
+  <HelpKINode Title="MoverioInput.GetAccUncalibratedAccuracy method" Url="html/057c4a0c-5cd9-2693-8126-6792cf11da05.htm" />
+  <HelpKINode Title="MoverioInput.GetGameRotation method" Url="html/70722e8e-53b3-c7e8-8ecf-16fa0f25de14.htm" />
+  <HelpKINode Title="MoverioInput.GetGameRotationAccuracy method" Url="html/87f12d07-ad71-e39d-ece6-414a9efd076b.htm" />
+  <HelpKINode Title="MoverioInput.GetGravity method" Url="html/5b8baf10-e4a2-7e2d-3eb0-2d967a6a03ae.htm" />
+  <HelpKINode Title="MoverioInput.GetGravityAccuracy method" Url="html/4e853056-8eb0-00e3-042b-5cf5d40ff07f.htm" />
+  <HelpKINode Title="MoverioInput.GetGyro method" Url="html/8bf852bb-a7d4-9904-bd0a-78af43cbceae.htm" />
+  <HelpKINode Title="MoverioInput.GetGyroAccuracy method" Url="html/daed1cdb-02b6-17de-367a-1d58ed0959be.htm" />
+  <HelpKINode Title="MoverioInput.GetGyroUncalibrated method" Url="html/f5f31cc8-339d-8587-a4c2-976a82c41e66.htm" />
+  <HelpKINode Title="MoverioInput.GetGyroUncalibratedAccuracy method" Url="html/bdfd8f78-342f-15fd-411c-da84bb0164ca.htm" />
+  <HelpKINode Title="MoverioInput.GetLight method" Url="html/cc8e0da1-9cd4-c9cc-ff9b-e541694b93bd.htm" />
+  <HelpKINode Title="MoverioInput.GetLightAccuracy method" Url="html/4c0ef8ce-1032-47a2-83c1-59a9f9a6d177.htm" />
+  <HelpKINode Title="MoverioInput.GetLinearAcc method" Url="html/167c692d-8a8f-16ba-b7da-778361fa8ae2.htm" />
+  <HelpKINode Title="MoverioInput.GetLinearAccAccuracy method" Url="html/91c32ce2-99a8-1628-29cd-b80e468f4052.htm" />
+  <HelpKINode Title="MoverioInput.GetMag method" Url="html/8145d752-5beb-86f2-a47a-5dd0705be9de.htm" />
+  <HelpKINode Title="MoverioInput.GetMagAccuracy method" Url="html/754f0d1b-a4e3-b859-9736-7a345f8b8530.htm" />
+  <HelpKINode Title="MoverioInput.GetMagUncalibrated method" Url="html/5cec85ee-29db-f9db-4208-843bf2395f56.htm" />
+  <HelpKINode Title="MoverioInput.GetMagUncalibratedAccuracy method" Url="html/9f235e7b-6d0c-4b51-3d3a-5fe61ffb950d.htm" />
+  <HelpKINode Title="MoverioInput.GetRotation method" Url="html/eaabad26-cc03-25d2-8636-de911e01ac0b.htm" />
+  <HelpKINode Title="MoverioInput.GetRotationAccuracy method" Url="html/3714b2b7-1158-a2f6-9d4a-188cc700460e.htm" />
+  <HelpKINode Title="MoverioInput.HeadsetDetectHandler class">
+    <HelpKINode Title="MoverioInput.HeadsetDetectHandler Class" Url="html/81871233-b493-fcbf-3caa-9b589c1125f8.htm" />
+    <HelpKINode Title="constructor" Url="html/77841ac6-df60-a20f-5bff-1837f8ac547e.htm" />
+  </HelpKINode>
+  <HelpKINode Title="MoverioInput.HeadsetDetectHandler.HeadsetDetectHandler constructor" Url="html/77841ac6-df60-a20f-5bff-1837f8ac547e.htm" />
+  <HelpKINode Title="MoverioInput.IsActive method" Url="html/f181494c-f0a8-8354-8517-4c364a2b6e82.htm" />
+  <HelpKINode Title="MoverioInput.MoverioInput constructor" Url="html/ca5ea174-ba7f-6ef4-1958-7e0aa41bb881.htm" />
+  <HelpKINode Title="MoverioInput.OnHeadsetMotionDetect field" Url="html/6182bb1f-902e-b2fb-4d13-b11e249455a0.htm" />
+  <HelpKINode Title="MoverioInput.OnHeadsetStationaryDetect field" Url="html/5d440e47-0fed-db76-607f-b064019e0cb7.htm" />
+  <HelpKINode Title="MoverioInput.OnHeadsetTapDetect field" Url="html/088ec723-51ab-6bc5-0cc4-0c66be96bad7.htm" />
+  <HelpKINode Title="MoverioInput.Reconnect method" Url="html/165064f9-6f71-4e92-10e1-9c26d228ccab.htm" />
+  <HelpKINode Title="OnCaptureData field" Url="html/159c6715-e137-f056-2726-f478a3c6b40d.htm" />
+  <HelpKINode Title="OnHeadsetAttached field" Url="html/ac6d1467-af78-e0e0-03db-0dbaaa3924ad.htm" />
+  <HelpKINode Title="OnHeadsetDetached field" Url="html/32b9b994-c207-300e-4650-36e80a10d255.htm" />
+  <HelpKINode Title="OnHeadsetMotionDetect field" Url="html/6182bb1f-902e-b2fb-4d13-b11e249455a0.htm" />
+  <HelpKINode Title="OnHeadsetStationaryDetect field" Url="html/5d440e47-0fed-db76-607f-b064019e0cb7.htm" />
+  <HelpKINode Title="OnHeadsetTapDetect field" Url="html/088ec723-51ab-6bc5-0cc4-0c66be96bad7.htm" />
+  <HelpKINode Title="OnPictureCompleted field" Url="html/d193c3cc-63e7-e4dc-14cd-2151a6e7f0ce.htm" />
+  <HelpKINode Title="OnRecordStarted field" Url="html/8e839ed3-2d59-aa5c-e256-8c9d45c73870.htm" />
+  <HelpKINode Title="OnRecordStopped field" Url="html/b1fe249f-263a-8924-0518-d724b74f81d7.htm" />
+  <HelpKINode Title="OnSetPropertyCompleted field" Url="html/61a4e5cb-8c9c-ab1b-1768-a7c13bffa306.htm" />
+  <HelpKINode Title="PowerLineFrequencyControlMode enumeration" Url="html/0b8cb044-9854-39bc-0423-aabc688119e4.htm" />
+  <HelpKINode Title="PowerLineFrequencyControlMode property" Url="html/7010ed79-2a16-0e2c-d78c-271fb6b44772.htm" />
+  <HelpKINode Title="POWER_LINE_FREQUENCY_CONTROL_MODE_50HZ enumeration member" Url="html/0b8cb044-9854-39bc-0423-aabc688119e4.htm" />
+  <HelpKINode Title="POWER_LINE_FREQUENCY_CONTROL_MODE_60HZ enumeration member" Url="html/0b8cb044-9854-39bc-0423-aabc688119e4.htm" />
+  <HelpKINode Title="POWER_LINE_FREQUENCY_CONTROL_MODE_UNKNOWN enumeration member" Url="html/0b8cb044-9854-39bc-0423-aabc688119e4.htm" />
+  <HelpKINode Title="Reconnect method">
+    <HelpKINode Title="MoverioAudio.Reconnect Method " Url="html/6d1f04f0-3c5e-53e6-b6e9-ed615933d413.htm" />
+    <HelpKINode Title="MoverioCamera.Reconnect Method " Url="html/254fab1e-2f68-9338-6380-b7729e740ee6.htm" />
+    <HelpKINode Title="MoverioDisplay.Reconnect Method " Url="html/c9feb789-8a24-13d7-35ea-e38c17dacbd4.htm" />
+    <HelpKINode Title="MoverioInfo.Reconnect Method " Url="html/a3136fd9-76b2-f2b1-7434-528ab6c98f7f.htm" />
+    <HelpKINode Title="MoverioInput.Reconnect Method " Url="html/165064f9-6f71-4e92-10e1-9c26d228ccab.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SensorDataAccuracy enumeration" Url="html/8b274639-dc5b-efc8-8961-0a29bb2ab240.htm" />
+  <HelpKINode Title="SENSOR_DATA_ACCURACY_HIGH enumeration member" Url="html/8b274639-dc5b-efc8-8961-0a29bb2ab240.htm" />
+  <HelpKINode Title="SENSOR_DATA_ACCURACY_LOW enumeration member" Url="html/8b274639-dc5b-efc8-8961-0a29bb2ab240.htm" />
+  <HelpKINode Title="SENSOR_DATA_ACCURACY_MEDIUM enumeration member" Url="html/8b274639-dc5b-efc8-8961-0a29bb2ab240.htm" />
+  <HelpKINode Title="SENSOR_DATA_UNRELIABLE enumeration member" Url="html/8b274639-dc5b-efc8-8961-0a29bb2ab240.htm" />
+  <HelpKINode Title="SetBrightness method" Url="html/e773ea5e-559f-6806-f50f-4ffa1c262e5d.htm" />
+  <HelpKINode Title="SetBrightnessMode method" Url="html/d1b08128-4bee-4916-fcab-23e0cdc70133.htm" />
+  <HelpKINode Title="SetDeviceMode method" Url="html/0bf35ffb-8fe7-07ff-fb29-6d9a9e5fc0b9.htm" />
+  <HelpKINode Title="SetDisplayMode method" Url="html/ba24d0e0-32b6-494c-da22-f2afa955631a.htm" />
+  <HelpKINode Title="SetDisplayState method" Url="html/c5dfc213-f80d-cd83-89a6-464268524fd3.htm" />
+  <HelpKINode Title="SetGainStep method" Url="html/aa1ae8a4-cc65-fff7-b9ab-2dbf372e4898.htm" />
+  <HelpKINode Title="SetProperty method" Url="html/1e07389a-9690-c69d-0ac7-1f94a8e4562a.htm" />
+  <HelpKINode Title="SetScreenHorizontalShiftStep method" Url="html/9e1405a7-4e4f-364b-1c0d-803e664e85a7.htm" />
+  <HelpKINode Title="SetVolume method" Url="html/3ee5e05b-57c4-e1b9-3478-be8daa700c0b.htm" />
+  <HelpKINode Title="SetVolumeLimitMode method" Url="html/008a01a4-20d9-4410-aefd-253f2379cd09.htm" />
+  <HelpKINode Title="StartRecord method" Url="html/b23c0c43-2d0f-f5f9-b49d-6e8221169fdb.htm" />
+  <HelpKINode Title="StopRecord method" Url="html/caf302c8-e33c-a5fa-7d5a-26385a66e1a7.htm" />
+  <HelpKINode Title="TakePicture method" Url="html/7c664032-3f87-6947-bc1b-c7e4ac01fec5.htm" />
+  <HelpKINode Title="VolumeLimitMode enumeration" Url="html/c1c29047-e4ca-d895-dbff-81ba72007963.htm" />
+  <HelpKINode Title="VOLUME_LIMIT_MODE_OFF enumeration member" Url="html/c1c29047-e4ca-d895-dbff-81ba72007963.htm" />
+  <HelpKINode Title="VOLUME_LIMIT_MODE_ON enumeration member" Url="html/c1c29047-e4ca-d895-dbff-81ba72007963.htm" />
+  <HelpKINode Title="WhiteBalanceMode enumeration" Url="html/3b38c2bc-6719-cc12-7b9b-34d1eae69450.htm" />
+  <HelpKINode Title="WhiteBalanceMode property" Url="html/4916636b-1fad-835c-3837-d8745db2486b.htm" />
+  <HelpKINode Title="WHITE_BALANCE_MODE_AUTO enumeration member" Url="html/3b38c2bc-6719-cc12-7b9b-34d1eae69450.htm" />
+  <HelpKINode Title="WHITE_BALANCE_MODE_CLOUDY_DAYLIGHT enumeration member" Url="html/3b38c2bc-6719-cc12-7b9b-34d1eae69450.htm" />
+  <HelpKINode Title="WHITE_BALANCE_MODE_DAYLIGHT enumeration member" Url="html/3b38c2bc-6719-cc12-7b9b-34d1eae69450.htm" />
+  <HelpKINode Title="WHITE_BALANCE_MODE_FLUORESCENT enumeration member" Url="html/3b38c2bc-6719-cc12-7b9b-34d1eae69450.htm" />
+  <HelpKINode Title="WHITE_BALANCE_MODE_INCANDESCENT enumeration member" Url="html/3b38c2bc-6719-cc12-7b9b-34d1eae69450.htm" />
+  <HelpKINode Title="WHITE_BALANCE_MODE_TWILIGHT enumeration member" Url="html/3b38c2bc-6719-cc12-7b9b-34d1eae69450.htm" />
+  <HelpKINode Title="WHITE_BALANCE_MODE_UNKNOWN enumeration member" Url="html/3b38c2bc-6719-cc12-7b9b-34d1eae69450.htm" />
+</HelpKI>
