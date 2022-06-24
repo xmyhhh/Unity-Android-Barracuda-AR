@@ -398,7 +398,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 8400000, guid: 2d6014420193a6f42a9ed5cc518ef72f, type: 2}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -580,110 +580,75 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9b052af97e504397ab00e3e52bbd084, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _source: {fileID: 8400000, guid: 2d6014420193a6f42a9ed5cc518ef72f, type: 2}
   _threshold: 0.2
   _resources: {fileID: 11400000, guid: 4bdfe4ce1192248c69b07ffd4bb583c2, type: 2}
   _preview: {fileID: 1088251496}
   _markerPrefab: {fileID: 4536004240564693993, guid: 60564bd5cdc8546268601d4f7d6ed7cc, type: 3}
-  webCamera: {fileID: 1653403275}
-  uvcCamera: {fileID: 1933912842}
   FpsText: {fileID: 721262359}
---- !u!1 &1933912840
-GameObject:
+--- !u!1001 &2097628106
+PrefabInstance:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1933912843}
-  - component: {fileID: 1933912842}
-  - component: {fileID: 1933912841}
-  m_Layer: 0
-  m_Name: UVCCamera
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1933912841
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1933912840}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1142889a03a59814c999ed9f90ffb46c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  frameTransferMode: 0
-  CameraInitializationTime: 2000
-  cameraScreens:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  rawTextures:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  messageText: {fileID: 0}
-  PromiscuousModeOn: 0
-  screenNeverSleep: 0
-  enableDebug: 0
-  enableNativeToast: 0
---- !u!114 &1933912842
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1933912840}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1aba81ae3ec3d84db15530083360134, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playing: 0
-  stopping: 0
-  plugin: {fileID: 1933912841}
-  deviceID: 0
-  width: 640
-  height: 480
-  FPS: 30
-  detailsPanel: {fileID: 0}
-  brightnessSlider: {fileID: 0}
-  contrastSlider: {fileID: 0}
-  onlyRenderOnUI: 0
-  isUSBCamera: 0
-  autoFit: 1
-  frameID: 0
-  supportedSizes: []
-  sizeSelector: {fileID: 0}
-  frameFormatSelector: {fileID: 0}
-  currentSize: 
-  currentFormat: 
-  tempTexture2D: {fileID: 0}
-  isNotAndroid: 0
-  enableFrameFormatAdjustment: 0
-  textureSize: {x: 1, y: 1}
---- !u!4 &1933912843
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1933912840}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 655.914, y: 872.8812, z: -16.004227}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 640875292535884056, guid: 506908f80b41b7a44b3d9c447546a837, type: 3}
+      propertyPath: CameraPreviewRenderTexture
+      value: 
+      objectReference: {fileID: 8400000, guid: 2d6014420193a6f42a9ed5cc518ef72f, type: 2}
+    - target: {fileID: 5735624289103882113, guid: 506908f80b41b7a44b3d9c447546a837, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5735624289103882113, guid: 506908f80b41b7a44b3d9c447546a837, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5735624289103882113, guid: 506908f80b41b7a44b3d9c447546a837, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5735624289103882113, guid: 506908f80b41b7a44b3d9c447546a837, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5735624289103882113, guid: 506908f80b41b7a44b3d9c447546a837, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5735624289103882113, guid: 506908f80b41b7a44b3d9c447546a837, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5735624289103882113, guid: 506908f80b41b7a44b3d9c447546a837, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5735624289103882113, guid: 506908f80b41b7a44b3d9c447546a837, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5735624289103882113, guid: 506908f80b41b7a44b3d9c447546a837, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5735624289103882113, guid: 506908f80b41b7a44b3d9c447546a837, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5735624289103882113, guid: 506908f80b41b7a44b3d9c447546a837, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5901011669994190247, guid: 506908f80b41b7a44b3d9c447546a837, type: 3}
+      propertyPath: m_Name
+      value: MoverioCamera
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 506908f80b41b7a44b3d9c447546a837, type: 3}
 --- !u!1 &2117733124
 GameObject:
   m_ObjectHideFlags: 0
