@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5050f0cc3c1f2c34daba87778d056b45, type: 3}
+  m_Name: YoloV5sDetector
+  m_EditorClassIdentifier: 
+  model: {fileID: 5022602860645237092, guid: 2a1acb7691539f94cbbc57c1ec9300e0, type: 3}
+  anchors:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  InferenceCPU: {fileID: 11400000, guid: 4aa0f4135420d3b4397053afffabdaf1, type: 2}
+  InferenceGPU: {fileID: 11400000, guid: d23b1085ea64ce445b121d9bc59313aa, type: 2}

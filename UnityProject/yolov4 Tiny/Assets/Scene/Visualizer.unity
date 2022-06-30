@@ -544,7 +544,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraTexture: {fileID: 8400000, guid: 2d6014420193a6f42a9ed5cc518ef72f, type: 2}
   threshold: 0.5
-  mode: {fileID: 11400000, guid: 4bdfe4ce1192248c69b07ffd4bb583c2, type: 2}
+  resourceSet: {fileID: 11400000, guid: 12b2c42d83e2783498ea32d122452ac5, type: 2}
+  inferenceDeviceType: 0
   preview: {fileID: 1088251496}
   markerPrefab: {fileID: 4536004240564693993, guid: 60564bd5cdc8546268601d4f7d6ed7cc, type: 3}
   FpsText: {fileID: 721262359}
