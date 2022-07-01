@@ -8,5 +8,13 @@ using UnityEngine;
 
 public abstract class InferenceScript : ScriptableObject
 {
-    public abstract void RunInference(NNModel model, Texture source, float threshold);
+    protected Model model;
+    protected IWorker worker;
+
+
+    public virtual void InitInference(ResourceSet resourceSet)
+    {
+        model = ModelLoader.Load(resourceSet.model);
+    }
+    public abstract void RunInference(RenderTexture source, float threshold);
 }

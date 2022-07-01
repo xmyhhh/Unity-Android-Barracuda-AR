@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-using YoloV4Tiny;
+using Unity.Barracuda;
 using TMPro;
 public enum InferenceDeviceType
 {
@@ -34,6 +34,8 @@ sealed class YoloDetector : MonoBehaviour
         {
             inferenceScript = resourceSet.InferenceCPU;
         }
+
+        inferenceScript.InitInference(resourceSet);
     }
 
     int frameCount;
@@ -52,7 +54,7 @@ sealed class YoloDetector : MonoBehaviour
         }
         #endregion
 
-        inferenceScript.RunInference(resourceSet.model, cameraTexture, threshold);
+        inferenceScript.RunInference(cameraTexture, threshold);
 
     }
 

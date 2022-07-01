@@ -8,7 +8,12 @@ using Unity.Barracuda;
                  menuName = "ScriptableObjects/Inference/YoloV5s Inference GPU")]
 public class InferenceScriptYoloV5sGPU: InferenceScript
 {
-    public override void RunInference(NNModel model, Texture source, float threshold)
+    public override void InitInference(ResourceSet resourceSet)
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public override void RunInference(RenderTexture source, float threshold)    
     {
         Debug.Log("ScriptableObjects/YoloV5s Inference GPU");
     }
