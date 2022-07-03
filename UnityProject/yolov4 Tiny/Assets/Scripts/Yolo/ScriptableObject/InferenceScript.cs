@@ -16,5 +16,5 @@ public abstract class InferenceScript : ScriptableObject
     {
         model = ModelLoader.Load(resourceSet.model);
     }
-    public abstract void RunInference(RenderTexture source, float threshold);
+    public abstract List<BoundingBoxDimensions> RunInference(RenderTexture source, float threshold);
 }

@@ -53,7 +53,7 @@ sealed class YoloDetector : MonoBehaviour
             FpsText.text = frameRate.ToString() + " FPS";
         }
         #endregion
-
+        inferenceScript.InitInference(resourceSet);
         inferenceScript.RunInference(cameraTexture, threshold);
 
     }

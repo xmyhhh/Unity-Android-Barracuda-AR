@@ -13,8 +13,9 @@ public class InferenceScriptYoloV5sGPU: InferenceScript
         throw new System.NotImplementedException();
     }
 
-    public override void RunInference(RenderTexture source, float threshold)    
+    public override List<BoundingBoxDimensions> RunInference(RenderTexture source, float threshold)    
     {
         Debug.Log("ScriptableObjects/YoloV5s Inference GPU");
+        return null;
     }
 }
