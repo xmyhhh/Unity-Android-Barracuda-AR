@@ -40,26 +40,8 @@ public class InferenceScriptYoloV5sCPU : InferenceScript
 
     private List<BoundingBoxDimensions> PostProcess(Tensor input, float threshold)
     {
-        var inputShape = input.shape;
+        var texture = input.ToRenderTexture();
 
-
-        var Res = new List<BoundingBoxDimensions>();
-        for (int i = 0; i < input.shape[7]; i++)
-        {
-            var confidence = input[0, 0, 4, i];
-            if (confidence < threshold)
-            {
-                continue;
-            }
-            //int[] starts = {  0, 0, 0, i };
-            //int[] ends = {  0, 0, 85, i };
-            //var classConf = input.StridedSlice(starts, ends).AsFloats();
-
-            var classConf = new List<float>();
-            for (int j = 0; j <85; j++)
-                classConf.Add(input[0, 0, j, i]);
-
-        }
 
         return null;
     }
@@ -73,7 +55,7 @@ public class InferenceScriptYoloV5sCPU : InferenceScript
         y[1] = x[1] - x[3] / 2;  // top left y
         y[2] = x[0] + x[2] / 2;  // bottom right x
         y[3] = x[1] + x[3] / 2;  // bottom right y
-        return y;
+        //return y;
     }
 
     //public void OnDisable()
