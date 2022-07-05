@@ -22,7 +22,7 @@ public class InferenceScriptYoloV5sCPU : InferenceScript
         width = shape[5];
         height = shape[6];
     }
-    public override List<BoundingBoxDimensions> RunInference(IWorker worker, RenderTexture source, float threshold)
+    public override List<BoundingBox> RunInference(IWorker worker, RenderTexture source, float threshold)
     {
         Debug.Log("ScriptableObjects/YoloV5s Inference CPU");
         var input = PreProcess(source);
@@ -45,9 +45,10 @@ public class InferenceScriptYoloV5sCPU : InferenceScript
 
     }
 
-    private List<BoundingBoxDimensions> PostProcess(Tensor input, float threshold)
+    private List<BoundingBox> PostProcess(Tensor input, float threshold)
     {
 
+        var output = new List<BoundingBox>();
         var inputShape = input.shape;
         for (int i = 0; i < input.shape[7]; i++)
         {
@@ -57,11 +58,33 @@ public class InferenceScriptYoloV5sCPU : InferenceScript
             {
                 continue;
             }
-            Debug.Log(confidence.ToString());
+
+            var builder = new ModelBuilder();
+            int[] starts = { 0, 0, 5, i };
+            int[] ends = { 0, 0, 85, i };
+            int[] strides = { 1, 1, 1, 1 };
+            builder.StridedSlice("outputslice", "original_output", starts, ends, strides);
+
+            var worker = WorkerFactory.CreateWorker(WorkerFactory.Type.CSharpBurst, builder.model);
+
+            worker.Execute(input);
+
+            var classConfidence = worker.PeekOutput();
+
+
+            output.Add(new BoundingBox(
+                _x: input[0, 0, 0, i],
+                _y: input[0, 0, 1, i],
+                _width: input[0, 0, 2, i],
+                _height: input[0, 0, 3, i],
+                _confidence: input[0, 0, 4, i],
+                _classIndex: classConfidence.ArgMax()[0]
+                ));
+
         }
 
 
-        return null;
+        return output;
     }
 
 
