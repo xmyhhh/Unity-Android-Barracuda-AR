@@ -13,7 +13,7 @@ public enum InferenceDeviceType
 sealed class YoloDetector : MonoBehaviour
 {
 
-    public RenderTexture cameraTexture = null;
+    public Texture2D inputTexture = null;
     [SerializeField, Range(0, 1)] float threshold = 0.5f;
     [SerializeField] ResourceSet resourceSet = null;
     public InferenceDeviceType inferenceDeviceType = InferenceDeviceType.CPU;
@@ -23,6 +23,10 @@ sealed class YoloDetector : MonoBehaviour
     InferenceScript inferenceScript;
 
     Marker[] _markers = new Marker[15];
+
+    Model model;
+    IWorker worker;
+
 
     void Start()
     {
@@ -34,8 +38,12 @@ sealed class YoloDetector : MonoBehaviour
         {
             inferenceScript = resourceSet.InferenceCPU;
         }
+        model = ModelLoader.Load(resourceSet.model);
 
-        inferenceScript.InitInference(resourceSet);
+        inferenceScript.InitInference(model);
+
+        worker = WorkerFactory.CreateWorker(WorkerFactory.Type.ComputePrecompiled, model);
+
     }
 
     int frameCount;
@@ -53,9 +61,14 @@ sealed class YoloDetector : MonoBehaviour
             FpsText.text = frameRate.ToString() + " FPS";
         }
         #endregion
-        inferenceScript.InitInference(resourceSet);
-        inferenceScript.RunInference(cameraTexture, threshold);
+
+
+        inferenceScript.RunInference(worker, TextureConverter.Texture2DToRenderTexture(inputTexture), threshold);
 
     }
 
+    void OnDestroy()
+    {
+        worker?.Dispose();
+    }
 }

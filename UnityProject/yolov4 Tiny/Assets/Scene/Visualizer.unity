@@ -543,7 +543,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraTexture: {fileID: 8400000, guid: 2d6014420193a6f42a9ed5cc518ef72f, type: 2}
-  threshold: 0.5
+  threshold: 0.25
   resourceSet: {fileID: 11400000, guid: 12b2c42d83e2783498ea32d122452ac5, type: 2}
   inferenceDeviceType: 0
   preview: {fileID: 1088251496}
@@ -562,7 +562,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sourceType: 0
-  _texture: {fileID: 2800000, guid: 52227c8a93b3e87499f4fb7ab8e597ca, type: 3}
+  _texture: {fileID: 2800000, guid: f52fb7ab14f67394cb30490092a0deef, type: 3}
   _textureUrl: 
   _video: {fileID: 0}
   _videoUrl: 

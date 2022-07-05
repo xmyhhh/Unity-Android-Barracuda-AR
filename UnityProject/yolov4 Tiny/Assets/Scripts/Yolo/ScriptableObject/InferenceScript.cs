@@ -8,13 +8,12 @@ using UnityEngine;
 
 public abstract class InferenceScript : ScriptableObject
 {
-    protected Model model;
-    protected IWorker worker;
 
 
-    public virtual void InitInference(ResourceSet resourceSet)
-    {
-        model = ModelLoader.Load(resourceSet.model);
-    }
-    public abstract List<BoundingBoxDimensions> RunInference(RenderTexture source, float threshold);
+    public abstract void InitInference(Model model);
+
+    public abstract List<BoundingBoxDimensions> RunInference(IWorker worker, RenderTexture source, float threshold);
+
+
+
 }
