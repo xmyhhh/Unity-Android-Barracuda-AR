@@ -12,7 +12,7 @@ public abstract class InferenceScript : ScriptableObject
 
     public abstract void InitInference(Model model);
 
-    public abstract List<BoundingBox> RunInference(IWorker worker, RenderTexture source, float threshold);
+    public abstract BoundingBox[] RunInference(IWorker worker, RenderTexture source, float threshold);
 
 
 

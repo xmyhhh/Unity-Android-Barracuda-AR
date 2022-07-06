@@ -22,7 +22,7 @@ public class InferenceScriptYoloV5sCPU : InferenceScript
         width = shape[5];
         height = shape[6];
     }
-    public override List<BoundingBox> RunInference(IWorker worker, RenderTexture source, float threshold)
+    public override BoundingBox[] RunInference(IWorker worker, RenderTexture source, float threshold)
     {
         Debug.Log("ScriptableObjects/YoloV5s Inference CPU");
         var input = PreProcess(source);
@@ -45,7 +45,7 @@ public class InferenceScriptYoloV5sCPU : InferenceScript
 
     }
 
-    private List<BoundingBox> PostProcess(Tensor input, float threshold)
+    private BoundingBox[] PostProcess(Tensor input, float threshold)
     {
 
         var output = new List<BoundingBox>();
@@ -84,7 +84,7 @@ public class InferenceScriptYoloV5sCPU : InferenceScript
         }
 
 
-        return output;
+        return DataProcess.NMS(output.ToArray());
     }
 
 

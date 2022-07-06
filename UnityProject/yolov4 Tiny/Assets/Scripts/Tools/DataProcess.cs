@@ -12,77 +12,85 @@ public struct BoundingBox
     public float confidence;
     public int classIndex;
 
-    public BoundingBox(float _x, float _y, float _width, float _height,float _confidence, int _classIndex)
+    public BoundingBox(float _x, float _y, float _width, float _height, float _confidence, int _classIndex)
     {
         x = _x;
         y = _y;
         width = _width;
         height = _height;
         confidence = _confidence;
-        classIndex = _classIndex;   
+        classIndex = _classIndex;
     }
 }
 
-public class DataProcess
+static public class DataProcess
 {
 
-    private BoundingBox[] NMS(BoundingBox[] rects, float[] prob, float threshold = 0.3f)
+    static public BoundingBox[] NMS(BoundingBox[] rects, float threshold = 0.3f)
     {
-        var rect_ranges = new List<BoundingBox>(rects);
-        var rect_result = new List<BoundingBox>();
-        var keep_result = new bool[rects.Length];
+        var rectRanges = new List<BoundingBox>(rects);
+        var rectResult = new List<BoundingBox>();
+        var keepResult = new bool[rects.Length];
 
         for (int idx = 0; idx < rects.Length - 1; idx++)
         {
 
-            var order = rect_ranges.GetRange(idx + 1, (rects.Length - idx) - 1);
-            var iou = Get_iou(order.ToArray(), rects[idx]);
+            var order = rectRanges.GetRange(idx + 1, (rects.Length - idx) - 1);
+            var iou = GetIOU(order.ToArray(), rects[idx]);
             for (int col = 0; col < iou.Count; col++)
             {
                 if (iou[col] > threshold)
                 {
                     /* get rect */
-                    keep_result[idx + col] = false;
+                    keepResult[idx + col] = false;
                     //rect_result.RemoveAt(idx);
                 }
                 else
                 {
-                    keep_result[idx + col] = true;
+                    keepResult[idx + col] = true;
                 }
             }
         }
 
-        for (int idx = 0; idx < keep_result.Length; idx++)
+        for (int idx = 0; idx < keepResult.Length; idx++)
         {
-            if (keep_result[idx])
+            if (keepResult[idx])
             {
-                rect_result.Add(rect_ranges[idx]);
+                rectResult.Add(rectRanges[idx]);
             }
         }
 
-        return rect_result.ToArray();
+        return rectResult.ToArray();
 
     }
-    private List<double> Get_iou(BoundingBox[] rects, BoundingBox box)
+    static private List<double> GetIOU(BoundingBox[] rects, BoundingBox box)
     {
-        var rect_len = rects.Length;
-        var xx1 = new List<double>();
-        var yy1 = new List<double>();
-        var union = new List<double>();
+        var rectLen = rects.Length;
+        var overlapArea_W = new List<double>();
+        var overlapArea_H = new List<double>();
 
-        for (int idx = 0; idx < rect_len; idx++)
+        var output = new List<double>();
+
+        //先计算overlapArea区域的W和H
+        for (int idx = 0; idx < rectLen; idx++)
         {
-            xx1.Add(Math.Max(Math.Min(rects[idx].x + 0.5 * rects[idx].width, box.x + 0.5 * box.width) - Math.Max(rects[idx].x - 0.5 * rects[idx].width, box.x - 0.5 * box.width), 0));
-            yy1.Add(Math.Max(Math.Min(rects[idx].y + 0.5 * rects[idx].height, box.y + 0.5 * box.height) - Math.Max(rects[idx].y - 0.5 * rects[idx].height, box.y - 0.5 * box.height), 0));
+            overlapArea_W.Add(
+                Math.Max(
+                    Math.Min(rects[idx].x + rects[idx].width, box.x + box.width) - Math.Max(rects[idx].x, box.x), 0)
+                );
+            overlapArea_H.Add(
+                Math.Max(
+                    Math.Min(rects[idx].y + rects[idx].height, box.y + box.height) - Math.Max(rects[idx].y, box.y), 0)
+                );
         }
 
-        for (int idx = 0; idx < rect_len; idx++)
+        for (int idx = 0; idx < rectLen; idx++)
         {
-            //inter.Add(xx1[idx] * yy1[idx]);
-            var inter = (double)(xx1[idx] * yy1[idx]);
-            union.Add(inter / (double)((rects[idx].width * rects[idx].height) + (box.width * box.height) - inter));
+
+            var overlapArea = (double)(overlapArea_W[idx] * overlapArea_H[idx]);
+            output.Add(overlapArea / (double)((rects[idx].width * rects[idx].height) + (box.width * box.height) - overlapArea));
         }
 
-        return union;
+        return output;
     }
 }
