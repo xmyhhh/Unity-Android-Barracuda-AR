@@ -13,7 +13,7 @@ public enum InferenceDeviceType
 sealed class YoloDetector : MonoBehaviour
 {
 
-    public Texture2D inputTexture = null;
+    public RenderTexture inputTexture = null;
     [SerializeField, Range(0, 1)] float threshold = 0.5f;
     [SerializeField] ResourceSet resourceSet = null;
     public InferenceDeviceType inferenceDeviceType = InferenceDeviceType.CPU;
@@ -22,7 +22,7 @@ sealed class YoloDetector : MonoBehaviour
 
     InferenceScript inferenceScript;
 
-    Marker[] _markers = new Marker[15];
+    Marker[] markers = new Marker[50];
 
     Model model;
     IWorker worker;
@@ -30,13 +30,21 @@ sealed class YoloDetector : MonoBehaviour
 
     void Start()
     {
+
+        // Marker populating
+        for (var i = 0; i < markers.Length; i++)
+        {
+            markers[i] = Instantiate(markerPrefab, preview.transform);
+            markers[i].SetLabel(resourceSet.Label);
+        }
+
         if (inferenceDeviceType == InferenceDeviceType.GPU)
         {
-            inferenceScript = resourceSet.InferenceGPU;
+            inferenceScript = resourceSet.inferenceGPU;
         }
         else
         {
-            inferenceScript = resourceSet.InferenceCPU;
+            inferenceScript = resourceSet.inferenceCPU;
         }
         model = ModelLoader.Load(resourceSet.model);
 
@@ -62,9 +70,20 @@ sealed class YoloDetector : MonoBehaviour
         }
         #endregion
 
+        var predict = inferenceScript.RunInference(worker, (inputTexture), threshold);
 
-        inferenceScript.RunInference(worker, TextureConverter.Texture2DToRenderTexture(inputTexture), threshold);
+        // Marker update
+        var i = 0;
 
+        foreach (var box in predict)
+        {
+            if (i == markers.Length) break;
+            markers[i++].SetAttributes(box);
+            //markers[49].SetAttributes(new BoundingBox(0,0,640,480,1,0));
+        }
+
+        for (; i < markers.Length; i++) markers[i].Hide();
+        //markers[49].Show();
     }
 
     void OnDestroy()

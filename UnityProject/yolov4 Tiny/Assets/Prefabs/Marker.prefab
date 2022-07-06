@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7473519887224608473}
   - component: {fileID: 274121433920510510}
   - component: {fileID: 4285222295184773777}
-  - component: {fileID: 4536004240564693993}
+  - component: {fileID: 5927982192954204014}
   m_Layer: 5
   m_Name: Marker
   m_TagString: Untagged
@@ -33,13 +33,13 @@ RectTransform:
   m_Children:
   - {fileID: 8732721309597980782}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 200, y: 200}
+  m_AnchoredPosition: {x: 150, y: 250}
   m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0, y: 1}
 --- !u!222 &274121433920510510
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -78,7 +78,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &4536004240564693993
+--- !u!114 &5927982192954204014
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -87,7 +87,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 956924398531042032}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1aeba09da6327453eb7a6d97e8cf8344, type: 3}
+  m_Script: {fileID: 11500000, guid: b6bb5637cc943754f8cc6c773fd201bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &6759218427256444580

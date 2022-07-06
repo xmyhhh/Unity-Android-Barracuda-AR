@@ -22,9 +22,9 @@ public class InferenceScriptYoloV5sCPU : InferenceScript
         width = shape[5];
         height = shape[6];
     }
-    public override BoundingBox[] RunInference(IWorker worker, RenderTexture source, float threshold)
+    public override BoundingBox[] RunInference(IWorker worker, Texture source, float threshold)
     {
-        Debug.Log("ScriptableObjects/YoloV5s Inference CPU");
+
         var input = PreProcess(source);
 
         worker.Execute(input);
@@ -34,22 +34,25 @@ public class InferenceScriptYoloV5sCPU : InferenceScript
         input.Dispose();
 
         return PostProcess(output, threshold);
-
     }
+
 
 
     private Tensor PreProcess(RenderTexture source)
     {
         return TextureConverter.RenderTextureToTensor(source);
+    }
 
-
+    private Tensor PreProcess(Texture source)
+    {
+        return TextureConverter.TextureToTensor(source);
     }
 
     private BoundingBox[] PostProcess(Tensor input, float threshold)
     {
 
         var output = new List<BoundingBox>();
-        var inputShape = input.shape;
+
         for (int i = 0; i < input.shape[7]; i++)
         {
 
@@ -78,10 +81,11 @@ public class InferenceScriptYoloV5sCPU : InferenceScript
                 _width: input[0, 0, 2, i],
                 _height: input[0, 0, 3, i],
                 _confidence: input[0, 0, 4, i],
-                _classIndex: classConfidence.ArgMax()[0]
-                ));
-
+                _classIndex: DataProcess.MaxValueIndex(classConfidence.AsFloats())
+                )) ;
+ 
         }
+
 
 
         return DataProcess.NMS(output.ToArray());

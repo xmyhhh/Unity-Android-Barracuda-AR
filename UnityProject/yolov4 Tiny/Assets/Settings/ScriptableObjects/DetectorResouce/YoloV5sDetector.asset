@@ -26,5 +26,6 @@ MonoBehaviour:
   - 0
   - 0
   - 0
-  InferenceCPU: {fileID: 11400000, guid: 4aa0f4135420d3b4397053afffabdaf1, type: 2}
-  InferenceGPU: {fileID: 11400000, guid: d23b1085ea64ce445b121d9bc59313aa, type: 2}
+  inferenceCPU: {fileID: 11400000, guid: 4aa0f4135420d3b4397053afffabdaf1, type: 2}
+  inferenceGPU: {fileID: 0}
+  classNameType: 0

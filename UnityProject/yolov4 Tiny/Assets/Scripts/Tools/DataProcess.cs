@@ -26,71 +26,82 @@ public struct BoundingBox
 static public class DataProcess
 {
 
-    static public BoundingBox[] NMS(BoundingBox[] rects, float threshold = 0.3f)
+    static public BoundingBox[] NMS(BoundingBox[] rects, float threshold = 0.2f)
     {
         var rectRanges = new List<BoundingBox>(rects);
-        var rectResult = new List<BoundingBox>();
-        var keepResult = new bool[rects.Length];
 
-        for (int idx = 0; idx < rects.Length - 1; idx++)
+        var sorted = SortObservationsByConfidence(rectRanges);
+
+        var selected = new List<BoundingBox>();
+
+
+        foreach (var observationA in sorted)
         {
+            var shouldSelect = true;
 
-            var order = rectRanges.GetRange(idx + 1, (rects.Length - idx) - 1);
-            var iou = GetIOU(order.ToArray(), rects[idx]);
-            for (int col = 0; col < iou.Count; col++)
+            foreach (var observationB in selected)
             {
-                if (iou[col] > threshold)
-                {
-                    /* get rect */
-                    keepResult[idx + col] = false;
-                    //rect_result.RemoveAt(idx);
-                }
-                else
-                {
-                    keepResult[idx + col] = true;
-                }
+                if (!(GetIOU(observationA, observationB) > threshold)) continue;
+                shouldSelect = false;
+                break;
+            }
+
+            if (shouldSelect)
+            {
+                selected.Add(observationA);
             }
         }
 
-        for (int idx = 0; idx < keepResult.Length; idx++)
-        {
-            if (keepResult[idx])
-            {
-                rectResult.Add(rectRanges[idx]);
-            }
-        }
-
-        return rectResult.ToArray();
+        return selected.ToArray();
 
     }
-    static private List<double> GetIOU(BoundingBox[] rects, BoundingBox box)
+    static private double GetIOU(BoundingBox rects, BoundingBox box)
     {
-        var rectLen = rects.Length;
-        var overlapArea_W = new List<double>();
-        var overlapArea_H = new List<double>();
 
-        var output = new List<double>();
+        double overlapArea_W;
+        double overlapArea_H;
+
+        double output;
 
         //先计算overlapArea区域的W和H
-        for (int idx = 0; idx < rectLen; idx++)
-        {
-            overlapArea_W.Add(
-                Math.Max(
-                    Math.Min(rects[idx].x + rects[idx].width, box.x + box.width) - Math.Max(rects[idx].x, box.x), 0)
-                );
-            overlapArea_H.Add(
-                Math.Max(
-                    Math.Min(rects[idx].y + rects[idx].height, box.y + box.height) - Math.Max(rects[idx].y, box.y), 0)
-                );
-        }
 
-        for (int idx = 0; idx < rectLen; idx++)
-        {
+        overlapArea_W = (
+            Math.Max(
+                Math.Min(rects.x + rects.width, box.x + box.width) - Math.Max(rects.x, box.x), 0)
+            );
+        overlapArea_H = (
+            Math.Max(
+                Math.Min(rects.y + rects.height, box.y + box.height) - Math.Max(rects.y, box.y), 0)
+            );
 
-            var overlapArea = (double)(overlapArea_W[idx] * overlapArea_H[idx]);
-            output.Add(overlapArea / (double)((rects[idx].width * rects[idx].height) + (box.width * box.height) - overlapArea));
-        }
+
+        var overlapArea = (double)(overlapArea_W * overlapArea_H);
+        output = (overlapArea / (double)((rects.width * rects.height) + (box.width * box.height) - overlapArea));
+
 
         return output;
+    }
+
+    static private IEnumerable<BoundingBox> SortObservationsByConfidence(IEnumerable<BoundingBox> observations)
+    {
+        var observationList = observations.ToList();
+        observationList.Sort((a, b) => (a.confidence > b.confidence ? -1 : 1));
+        return observationList;
+    }
+
+
+    public static int MaxValueIndex(float[] floatArray)
+    {
+        var max = floatArray[0];
+        int maxIndex = 0;
+        for (int i = 1; i < floatArray.Length; i++)
+        {
+            if (floatArray[i] > max)
+            {
+                max = floatArray[i];
+                maxIndex = i;
+            }
+        }
+        return maxIndex;
     }
 }

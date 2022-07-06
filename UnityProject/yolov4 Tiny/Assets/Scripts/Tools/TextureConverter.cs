@@ -45,6 +45,11 @@ public static class TextureConverter
         return new Tensor(pic, 3);
     }
 
+    public static Tensor TextureToTensor(Texture pic)
+    {
+        return new Tensor(pic, 3);
+    }
+
     public static Texture2D Texture2DResize(Texture2D texture2D, int targetX, int targetY)
     {
 
