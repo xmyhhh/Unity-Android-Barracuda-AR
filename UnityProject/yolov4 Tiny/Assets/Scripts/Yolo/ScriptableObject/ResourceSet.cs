@@ -25,6 +25,9 @@ public sealed class ResourceSet : ScriptableObject
                 case ClassNameType.COCO80:
                     return ClassName.COCO80;
                     break;
+                case ClassNameType.class4:
+                    return ClassName.class4;
+                    break;
                 default:
                     return ClassName.YoloV4Tiny;
                     break;

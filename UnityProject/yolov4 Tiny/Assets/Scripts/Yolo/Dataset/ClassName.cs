@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-public enum ClassNameType { COCO80 , YoloV4Tiny }
+public enum ClassNameType { COCO80 , YoloV4Tiny , class4 }
 public static class ClassName
 {
 
@@ -28,6 +28,9 @@ public static class ClassName
         "Sheep", "Sofa", "Train", "TV"
     };
 
-
+    public static string[] class4 =
+    {
+        "tp", "sf", "usb", "vga"
+    };
 
 }

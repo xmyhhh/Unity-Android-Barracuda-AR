@@ -12,8 +12,9 @@ public class InferenceScriptYoloV5sCPU : InferenceScript
 
     int width;
     int height;
-
     bool hasDetect = false;
+
+    List<string> outputName;
 
     Tensor output;
     public override void InitInference(Model model)
@@ -21,31 +22,41 @@ public class InferenceScriptYoloV5sCPU : InferenceScript
         shape = model.inputs[0].shape;
         width = shape[5];
         height = shape[6];
+
+
+        outputName = model.outputs;
     }
-    public override BoundingBox[] RunInference(IWorker worker, Texture source, float threshold)
+    public override BoundingBox[] RunInference(IWorker worker, RenderTexture source, float threshold)
     {
 
         var input = PreProcess(source);
 
         worker.Execute(input);
 
-        var output = worker.PeekOutput();
-
         input.Dispose();
+        if (outputName.Count > 1)
+        {
+            Tensor[] output = new Tensor[outputName.Count];
+            for (int i = 0; i < outputName.Count; i++)
+            {
+                output[i] = worker.PeekOutput(outputName[i]);
+            }
+            return PostProcessByLayer(output, threshold);
+        }
+        else
+        {
+            var output = worker.PeekOutput();
+            return PostProcess(output, threshold);
+        }
 
-        return PostProcess(output, threshold);
     }
-
 
 
     private Tensor PreProcess(RenderTexture source)
     {
-        return TextureConverter.RenderTextureToTensor(source);
-    }
+        TextureConverter.Texture2DToPNG(TextureConverter.RenderTextureToTexture2D(source));
 
-    private Tensor PreProcess(Texture source)
-    {
-        return TextureConverter.TextureToTensor(source);
+        return TextureConverter.ToTensor(source);
     }
 
     private BoundingBox[] PostProcess(Tensor input, float threshold)
@@ -82,16 +93,42 @@ public class InferenceScriptYoloV5sCPU : InferenceScript
                 _height: input[0, 0, 3, i],
                 _confidence: input[0, 0, 4, i],
                 _classIndex: DataProcess.MaxValueIndex(classConfidence.AsFloats())
-                )) ;
- 
-        }
+                ));
 
+        }
+        return DataProcess.NMS(output.ToArray());
+    }
+
+    private BoundingBox[] PostProcessByLayer(Tensor[] inputs, float threshold)
+    {
+
+        var output = new List<BoundingBox>();
+        var anchorBoxArray = new List<float[]>();
+        foreach (var input in inputs)
+        {
+            var boxNumH = input.shape[5];
+            var boxNumW = input.shape[6];
+            var boxNumC = input.shape[7];
+            for (int i = 0; i < boxNumH; i++)
+            {
+                for (int j = 0; j < boxNumW; j++)
+                {
+                    for (var k = 0; k < boxNumC; k++)
+                    {
+                        float[] anchorBox = new float[9];
+                        for (int l = 0; l < 9; l++)
+                        {
+                            anchorBox[l] = input[0, 0, 0, 0, i, j, l, k];
+                        }
+                        anchorBoxArray.Add(anchorBox);
+                    }
+                }
+            }
+        }
 
 
         return DataProcess.NMS(output.ToArray());
     }
-
-
 
     private void xywh2xyxy(int[] x)
     {
@@ -100,24 +137,14 @@ public class InferenceScriptYoloV5sCPU : InferenceScript
         y[1] = x[1] - x[3] / 2;  // top left y
         y[2] = x[0] + x[2] / 2;  // bottom right x
         y[3] = x[1] + x[3] / 2;  // bottom right y
-        //return y;
+
     }
 
-    //public void OnDisable()
-    //{
-    //    worker.Dispose();
-    //}
+
 }
 
 
-//Res.Add(new BoundingBoxDimensions
-//{
-//    X = output[0, 0, 0, 0, 0, 0, i, 0],
-//    Y = output[0, 0, 0, 0, 0, 0, i, 1],
-//    Width = output[0, 0, 0, 0, 0, 0, i, 2],
-//    Height = output[0, 0, 0, 0, 0, 0, i, 3]
 
-//});
 
 
 

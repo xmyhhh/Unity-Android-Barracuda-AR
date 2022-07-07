@@ -13,22 +13,65 @@ public sealed class ImageSourceSelector : MonoBehaviour
     public RenderTexture output;
     public ImageSourceType imageSourceType;
 
+    public Texture2D image;
+
     WebCamTexture cameraTexture;
     bool isCamAvailable;
+    int outputWidth;
+    int outputHeight;
+
+
+
     void Start()
     {
-         if(imageSourceType == ImageSourceType.WebCam)
+        outputWidth = output.width;
+        outputHeight = output.height;
+
+        switch (imageSourceType)
         {
-            WebCamInit();
+            case ImageSourceType.WebCam:
+                {
+                    WebCamInit();
+                    break;
+                }
+            case ImageSourceType.Image:
+                {
+                    ImageInit();
+                    break;
+                }
         }
     }
 
     private void Update()
     {
-        if (imageSourceType == ImageSourceType.WebCam)
+
+        switch (imageSourceType)
         {
-            WebcamUpdate();
+            case ImageSourceType.WebCam:
+                {
+                    WebcamUpdate();
+                    break;
+                }
+            case ImageSourceType.Image:
+                {
+                    break;
+                }
         }
+    }
+
+    private void ImageInit()
+    {
+        float factor = outputWidth / outputHeight;
+
+        if (image.height * factor < image.width)
+        {
+            Graphics.Blit(TextureConverter.Texture2DCenterCrop(image, (int)(image.height * factor), image.height), output);
+        }
+        else
+        {
+            Graphics.Blit(TextureConverter.Texture2DCenterCrop(image, image.width, (int)(image.width / factor)), output);
+        }
+
     }
 
     private void WebCamInit()
@@ -63,14 +106,12 @@ public sealed class ImageSourceSelector : MonoBehaviour
         cameraTexture.Play();
         float h = cameraTexture.height;
         float w = cameraTexture.width;
-        Debug.Log("The camera pixel is: " + w );
+        Debug.Log("The camera pixel is: " + w);
         Debug.Log("The camera pixel is: " + h);
         rawImage.texture = cameraTexture;
 
         isCamAvailable = true;
     }
-
-
     private void WebcamUpdate()
     {
         if (isCamAvailable)

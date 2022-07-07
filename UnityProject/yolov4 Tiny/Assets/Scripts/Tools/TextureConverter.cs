@@ -34,18 +34,20 @@ public static class TextureConverter
 
         return rt;
     }
-    public static Tensor Texture2DToTensor(Texture2D texture2D)
-    {
-        return new Tensor(texture2D, 3);
-    }
 
 
-    public static Tensor RenderTextureToTensor(RenderTexture pic)
+
+    public static Tensor ToTensor(RenderTexture pic)
     {
         return new Tensor(pic, 3);
     }
 
-    public static Tensor TextureToTensor(Texture pic)
+    public static Tensor ToTensor(Texture pic)
+    {
+        return new Tensor(pic, 3);
+    }
+
+    public static Tensor ToTensor(Texture2D pic)
     {
         return new Tensor(pic, 3);
     }
@@ -73,11 +75,39 @@ public static class TextureConverter
         {
             Directory.CreateDirectory(dirPath);
         }
-        File.WriteAllBytes(dirPath + "Image" + ".png", bytes);
+        File.WriteAllBytes(dirPath + "Imagexmy" + ".png", bytes);
     }
 
 
 
+    public static Texture2D RenderTextureCenterCrop(RenderTexture input, int width, int height)
+    {
+        return Texture2DCenterCrop(RenderTextureToTexture2D(input), width, height);
+    }
+
+    public static Texture2D Texture2DCenterCrop(Texture2D input, int width, int height)
+    {
+
+        var inputWidth = input.width;
+        var inputHeight = input.height;
+
+        var centerX = inputWidth / 2;
+        var centerY = inputHeight / 2;
+
+        if (inputWidth < width || inputHeight < height)
+        {
+            Debug.Log("Texture2DCenterCrop Error");
+            return null;
+        }
+
+        var cropWidth = (int)(centerX + width / 2) - (int)(centerX - width / 2);
+        var cropHeight = (int)(centerY + height / 2) - (int)(centerY - height / 2);
+        Color[] c = input.GetPixels((int)(centerX - width / 2), (int)(centerY - height / 2), cropWidth, cropHeight);
+        Texture2D output = new Texture2D(cropWidth, cropHeight, input.format, false);
+        output.SetPixels(c);
+        output.Apply();
+        return output;
+    }
 
 
 
