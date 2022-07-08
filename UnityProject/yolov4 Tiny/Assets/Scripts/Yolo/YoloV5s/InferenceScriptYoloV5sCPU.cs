@@ -34,20 +34,19 @@ public class InferenceScriptYoloV5sCPU : InferenceScript
         worker.Execute(input);
 
         input.Dispose();
-        if (outputName.Count > 1)
-        {
-            Tensor[] output = new Tensor[outputName.Count];
-            for (int i = 0; i < outputName.Count; i++)
-            {
-                output[i] = worker.PeekOutput(outputName[i]);
-            }
-            return PostProcessByLayer(output, threshold);
-        }
-        else
-        {
-            var output = worker.PeekOutput();
-            return PostProcess(output, threshold);
-        }
+        //if (outputName.Count > 1)
+        //{
+        //    Tensor[] output = new Tensor[outputName.Count];
+        //    for (int i = 0; i < outputName.Count; i++)
+        //    {
+        //        output[i] = worker.PeekOutput(outputName[i]);
+        //    }
+        //    return PostProcessByLayer(output, threshold);
+        //}
+
+        var output = worker.PeekOutput();
+        return PostProcess(output, threshold);
+
 
     }
 
@@ -75,7 +74,7 @@ public class InferenceScriptYoloV5sCPU : InferenceScript
 
             var builder = new ModelBuilder();
             int[] starts = { 0, 0, 5, i };
-            int[] ends = { 0, 0, 85, i };
+            int[] ends = { 0, 0, 9, i };
             int[] strides = { 1, 1, 1, 1 };
             builder.StridedSlice("outputslice", "original_output", starts, ends, strides);
 

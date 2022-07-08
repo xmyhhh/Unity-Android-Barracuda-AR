@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5050f0cc3c1f2c34daba87778d056b45, type: 3}
   m_Name: YoloV5sDetctor(320 320 4 class)
   m_EditorClassIdentifier: 
-  model: {fileID: 5022602860645237092, guid: 35f69fb1c7d2ac449939e5c3a651fdb3, type: 3}
+  model: {fileID: 5022602860645237092, guid: 03791f3224fd90c49a6ce76c948cb8f2, type: 3}
   anchors:
   - 0
   - 0

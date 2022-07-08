@@ -29,8 +29,8 @@ public class Marker : MonoBehaviour
         var rect = parent.rect;
 
         // Bounding box position
-        var x = d.x - d.width / 2;
-        var y = 480  -(d.y - d.height / 2);
+        var x = d.x;
+        var y =  - (d.y);
         var w = d.width;
         var h = d.height ;
 
@@ -42,7 +42,7 @@ public class Marker : MonoBehaviour
         var name = labels[(int)d.classIndex];
         Debug.Log(name);
         Debug.Log($"x:{d.x},y:{d.y},width:{d.width},height:{d.height}");
-        label.text = $"{name} {(int)(d.confidence * 100)}%";
+        label.text = $"{name} {(d.confidence * 100).ToString("#0.00")}%";
 
         // Panel color
         var hue = d.classIndex * 0.073f % 1.0f;
