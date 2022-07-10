@@ -3,6 +3,8 @@ using UnityEngine.UI;
 
 using Unity.Barracuda;
 using TMPro;
+using System.Collections;
+
 public enum InferenceDeviceType
 {
     CPU,
@@ -22,12 +24,12 @@ sealed class YoloDetector : MonoBehaviour
 
     InferenceScript inferenceScript;
 
-    Marker[] markers = new Marker[50];
+    Marker[] markers = new Marker[15];
 
     Model model;
     IWorker worker;
 
-
+    Tensor input;
     void Start()
     {
 
@@ -49,9 +51,12 @@ sealed class YoloDetector : MonoBehaviour
         model = ModelLoader.Load(resourceSet.model);
 
         inferenceScript.InitInference(model);
+        //worker = WorkerFactory.CreateWorker(WorkerFactory.Type.CSharpBurst, model);
 
-        worker = WorkerFactory.CreateWorker(WorkerFactory.Type.ComputePrecompiled, model);
+        worker = model.CreateWorker();
 
+        //StartCoroutine(InferenceCoroutine());
+        input = inferenceScript.PreProcess(inputTexture);
     }
 
     int frameCount;
@@ -70,20 +75,38 @@ sealed class YoloDetector : MonoBehaviour
         }
         #endregion
 
-        var predict = inferenceScript.RunInference(worker, (inputTexture), threshold);
 
-        // Marker update
-        var i = 0;
+        var output = worker.Execute(input).PeekOutput();
 
-        foreach (var box in predict)
+    }
+
+    IEnumerator InferenceCoroutine()
+    {
+        while (true)
         {
-            if (i == markers.Length) break;
-            markers[i++].SetAttributes(box);
-            //markers[49].SetAttributes(new BoundingBox(0,0,640,480,1,0));
-        }
+            // convert texture into Tensor of shape [1, imageToRecognise.height, imageToRecognise.width, 3]
+            using (var input = inferenceScript.PreProcess(inputTexture))
+            {
+                // execute neural network with specific input and get results back
+                //var output = worker.Execute(input).PeekOutput();
 
-        for (; i < markers.Length; i++) markers[i].Hide();
-        //markers[49].Show();
+                //// allow main thread to run until neural network execution has finished
+                //yield return new WaitForCompletion(output);
+
+                //var predict = inferenceScript.PostProcess(output, threshold);
+
+
+                //var i = 0;
+
+                //foreach (var box in predict)
+                //{
+                //    if (i == markers.Length) break;
+                //    markers[i++].SetAttributes(box);
+                //}
+
+                //for (; i < markers.Length; i++) markers[i].Hide();
+            }
+        }
     }
 
     void OnDestroy()

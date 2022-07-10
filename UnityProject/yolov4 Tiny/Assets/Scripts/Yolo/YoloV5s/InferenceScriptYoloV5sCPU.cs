@@ -23,8 +23,6 @@ public class InferenceScriptYoloV5sCPU : InferenceScript
         width = shape[5];
         height = shape[6];
 
-
-        outputName = model.outputs;
     }
     public override BoundingBox[] RunInference(IWorker worker, RenderTexture source, float threshold)
     {
@@ -34,31 +32,21 @@ public class InferenceScriptYoloV5sCPU : InferenceScript
         worker.Execute(input);
 
         input.Dispose();
-        //if (outputName.Count > 1)
-        //{
-        //    Tensor[] output = new Tensor[outputName.Count];
-        //    for (int i = 0; i < outputName.Count; i++)
-        //    {
-        //        output[i] = worker.PeekOutput(outputName[i]);
-        //    }
-        //    return PostProcessByLayer(output, threshold);
-        //}
 
         var output = worker.PeekOutput();
         return PostProcess(output, threshold);
 
-
     }
 
 
-    private Tensor PreProcess(RenderTexture source)
+    public override Tensor PreProcess(RenderTexture source)
     {
         TextureConverter.Texture2DToPNG(TextureConverter.RenderTextureToTexture2D(source));
 
         return TextureConverter.ToTensor(source);
     }
 
-    private BoundingBox[] PostProcess(Tensor input, float threshold)
+    public override BoundingBox[] PostProcess(Tensor input, float threshold)
     {
 
         var output = new List<BoundingBox>();
@@ -96,47 +84,6 @@ public class InferenceScriptYoloV5sCPU : InferenceScript
 
         }
         return DataProcess.NMS(output.ToArray());
-    }
-
-    private BoundingBox[] PostProcessByLayer(Tensor[] inputs, float threshold)
-    {
-
-        var output = new List<BoundingBox>();
-        var anchorBoxArray = new List<float[]>();
-        foreach (var input in inputs)
-        {
-            var boxNumH = input.shape[5];
-            var boxNumW = input.shape[6];
-            var boxNumC = input.shape[7];
-            for (int i = 0; i < boxNumH; i++)
-            {
-                for (int j = 0; j < boxNumW; j++)
-                {
-                    for (var k = 0; k < boxNumC; k++)
-                    {
-                        float[] anchorBox = new float[9];
-                        for (int l = 0; l < 9; l++)
-                        {
-                            anchorBox[l] = input[0, 0, 0, 0, i, j, l, k];
-                        }
-                        anchorBoxArray.Add(anchorBox);
-                    }
-                }
-            }
-        }
-
-
-        return DataProcess.NMS(output.ToArray());
-    }
-
-    private void xywh2xyxy(int[] x)
-    {
-        var y = new int[4];
-        y[0] = x[0] - x[2] / 2;  // top left x
-        y[1] = x[1] - x[3] / 2;  // top left y
-        y[2] = x[0] + x[2] / 2;  // bottom right x
-        y[3] = x[1] + x[3] / 2;  // bottom right y
-
     }
 
 

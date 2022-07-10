@@ -14,6 +14,7 @@ public abstract class InferenceScript : ScriptableObject
 
     public abstract BoundingBox[] RunInference(IWorker worker, RenderTexture source, float threshold);
 
+    public abstract Tensor PreProcess(RenderTexture source);
 
-
+    public abstract BoundingBox[] PostProcess(Tensor input, float threshold);
 }
