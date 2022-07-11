@@ -41,9 +41,17 @@ public class InferenceScriptYoloV5sCPU : InferenceScript
 
     public override Tensor PreProcess(RenderTexture source)
     {
-        TextureConverter.Texture2DToPNG(TextureConverter.RenderTextureToTexture2D(source));
+        if (source.width == width && source.height == height)
+        {
+            return TextureConverter.ToTensor(source);
+        }
+        else
+        {
+            TextureConverter.Texture2DToPNG(TextureConverter.RenderTextureToTexture2D(source));
 
-        return TextureConverter.ToTensor(source);
+            return TextureConverter.ToTensor(source);
+        }
+
     }
 
     public override BoundingBox[] PostProcess(Tensor input, float threshold)

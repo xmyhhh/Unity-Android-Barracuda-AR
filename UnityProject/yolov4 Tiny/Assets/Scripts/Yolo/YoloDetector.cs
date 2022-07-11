@@ -55,8 +55,8 @@ sealed class YoloDetector : MonoBehaviour
 
         worker = model.CreateWorker();
 
-        //StartCoroutine(InferenceCoroutine());
-        input = inferenceScript.PreProcess(inputTexture);
+        StartCoroutine(InferenceCoroutine());
+        //input = inferenceScript.PreProcess(inputTexture);
     }
 
     int frameCount;
@@ -76,7 +76,7 @@ sealed class YoloDetector : MonoBehaviour
         #endregion
 
 
-        var output = worker.Execute(input).PeekOutput();
+        //var output = worker.Execute(input).PeekOutput();
 
     }
 
@@ -88,23 +88,23 @@ sealed class YoloDetector : MonoBehaviour
             using (var input = inferenceScript.PreProcess(inputTexture))
             {
                 // execute neural network with specific input and get results back
-                //var output = worker.Execute(input).PeekOutput();
+                var output = worker.Execute(input).PeekOutput();
 
                 //// allow main thread to run until neural network execution has finished
-                //yield return new WaitForCompletion(output);
+                yield return new WaitForCompletion(output);
 
-                //var predict = inferenceScript.PostProcess(output, threshold);
+                var predict = inferenceScript.PostProcess(output, threshold);
 
 
-                //var i = 0;
+                var i = 0;
 
-                //foreach (var box in predict)
-                //{
-                //    if (i == markers.Length) break;
-                //    markers[i++].SetAttributes(box);
-                //}
+                foreach (var box in predict)
+                {
+                    if (i == markers.Length) break;
+                    markers[i++].SetAttributes(box);
+                }
 
-                //for (; i < markers.Length; i++) markers[i].Hide();
+                for (; i < markers.Length; i++) markers[i].Hide();
             }
         }
     }

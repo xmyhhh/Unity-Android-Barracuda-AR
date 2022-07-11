@@ -95,7 +95,7 @@ public sealed class ImageSourceSelector : MonoBehaviour
 
 
         WebCamDevice device = devices[0];
-        cameraTexture = new WebCamTexture(device.name, 640, 480);
+        cameraTexture = new WebCamTexture(device.name, 320  , 320);
 
         if (cameraTexture == null)
         {

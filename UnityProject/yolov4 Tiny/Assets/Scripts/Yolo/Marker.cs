@@ -40,8 +40,8 @@ public class Marker : MonoBehaviour
 
         // Label (class name + score)
         var name = labels[(int)d.classIndex];
-        Debug.Log(name);
-        Debug.Log($"x:{d.x},y:{d.y},width:{d.width},height:{d.height}");
+        //Debug.Log(name);
+        //Debug.Log($"x:{d.x},y:{d.y},width:{d.width},height:{d.height}");
         label.text = $"{name} {(d.confidence * 100).ToString("#0.00")}%";
 
         // Panel color
