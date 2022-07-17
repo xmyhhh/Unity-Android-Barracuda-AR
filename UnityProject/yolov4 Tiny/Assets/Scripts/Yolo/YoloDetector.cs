@@ -42,21 +42,16 @@ sealed class YoloDetector : MonoBehaviour
 
         if (inferenceDeviceType == InferenceDeviceType.GPU)
         {
-            inferenceScript = resourceSet.inferenceGPU;
+            inferenceScript = resourceSet.InferenceGPU;
         }
         else
         {
-            inferenceScript = resourceSet.inferenceCPU;
+            inferenceScript = resourceSet.InferenceCPU;
         }
-        model = ModelLoader.Load(resourceSet.model);
 
-        inferenceScript.InitInference(model);
-        //worker = WorkerFactory.CreateWorker(WorkerFactory.Type.CSharpBurst, model);
 
-        worker = model.CreateWorker();
+        inferenceScript.InitInference(resourceSet, threshold);
 
-        StartCoroutine(InferenceCoroutine());
-        //input = inferenceScript.PreProcess(inputTexture);
     }
 
     int frameCount;
@@ -78,6 +73,16 @@ sealed class YoloDetector : MonoBehaviour
 
         //var output = worker.Execute(input).PeekOutput();
 
+
+        var i = 0;
+
+        foreach (var box in inferenceScript.RunInference(inputTexture))
+        {
+            if (i == markers.Length) break;
+            markers[i++].SetAttributes(box);
+        }
+
+        for (; i < markers.Length; i++) markers[i].Hide();
     }
 
     IEnumerator InferenceCoroutine()

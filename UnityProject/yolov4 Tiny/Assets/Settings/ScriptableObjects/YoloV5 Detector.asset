@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5050f0cc3c1f2c34daba87778d056b45, type: 3}
-  m_Name: YoloV5sDetctor(320 320 4 class)
+  m_Script: {fileID: 11500000, guid: c57549d9ff3b9254786c662774b76cd0, type: 3}
+  m_Name: YoloV5 Detector
   m_EditorClassIdentifier: 
   model: {fileID: 5022602860645237092, guid: 03791f3224fd90c49a6ce76c948cb8f2, type: 3}
   anchors:
@@ -26,6 +26,5 @@ MonoBehaviour:
   - 0
   - 0
   - 0
-  inferenceCPU: {fileID: 11400000, guid: 4aa0f4135420d3b4397053afffabdaf1, type: 2}
-  inferenceGPU: {fileID: 0}
-  classNameType: 2
+  postProcessStage1: {fileID: 7200000, guid: 51d326ac56fae4148b8ea139305120e2, type: 3}
+  postProcessStage2: {fileID: 7200000, guid: 5e65ba4a728978f45b31129144338ff8, type: 3}

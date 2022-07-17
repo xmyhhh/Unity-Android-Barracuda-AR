@@ -21,6 +21,17 @@ public static class TextureConverter
         return dest;
     }
 
+    public static Texture2D RenderTextureToTexture2DRFloat(RenderTexture rTex)
+    {
+
+        Texture2D dest = new Texture2D(rTex.width, rTex.height, TextureFormat.RFloat, false);
+        dest.Apply(false);
+
+        RenderTexture.active = rTex;
+        dest.ReadPixels(new Rect(0, 0, rTex.width, rTex.height), 0, 0, false);
+
+        return dest;
+    }
     public static RenderTexture Texture2DToRenderTexture(Texture2D texRef)
     {
         //这个方法已经测试过应该没问题
@@ -35,7 +46,10 @@ public static class TextureConverter
         return rt;
     }
 
-
+    public static Tensor ToTensorZoreDepth(RenderTexture pic)
+    {
+        return new Tensor(pic, 1);
+    }
 
     public static Tensor ToTensor(RenderTexture pic)
     {

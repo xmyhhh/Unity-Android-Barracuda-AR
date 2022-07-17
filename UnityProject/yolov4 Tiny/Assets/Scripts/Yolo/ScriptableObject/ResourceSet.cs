@@ -3,37 +3,20 @@ using Unity.Barracuda;
 
 
 
-[CreateAssetMenu(fileName = "YoloDetector",
-                 menuName = "ScriptableObjects/Yolo Resource Set")]
-public sealed class ResourceSet : ScriptableObject
+
+public abstract class ResourceSet : ScriptableObject
 {
     public NNModel model;
     public float[] anchors = new float[12];
 
-    public InferenceScript inferenceCPU;
+    public ComputeShader postProcessStage1;
+    public ComputeShader postProcessStage2;
+    public abstract InferenceScript InferenceCPU { get; }
 
-    public InferenceScript inferenceGPU;
+    public abstract InferenceScript InferenceGPU { get; }
 
-    public ClassNameType classNameType;
+    public abstract string[] Label { get; }
 
-    public string[] Label
-    {
-        get
-        {
-            switch (classNameType)
-            {
-                case ClassNameType.COCO80:
-                    return ClassName.COCO80;
-                    break;
-                case ClassNameType.class4:
-                    return ClassName.class4;
-                    break;
-                default:
-                    return ClassName.YoloV4Tiny;
-                    break;
-            }
-        }
-    }
 }
 
 

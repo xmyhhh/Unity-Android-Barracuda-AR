@@ -12,6 +12,14 @@ public struct BoundingBox
     public float confidence;
     public int classIndex;
 
+    public static int Size
+    {
+        get
+        {
+            return 6 * sizeof(int);
+        }
+    }
+
     public BoundingBox(float _x, float _y, float _width, float _height, float _confidence, int _classIndex)
     {
         x = _x;

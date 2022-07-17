@@ -4,8 +4,7 @@ using UnityEngine;
 using Unity.Barracuda;
 
 
-[CreateAssetMenu(fileName = "YoloV5s Inference CPU",
-                 menuName = "ScriptableObjects/Inference/YoloV5s Inference CPU")]
+
 public class InferenceScriptYoloV5sCPU : InferenceScript
 {
     int[] shape;
@@ -17,14 +16,15 @@ public class InferenceScriptYoloV5sCPU : InferenceScript
     List<string> outputName;
 
     Tensor output;
-    public override void InitInference(Model model)
+    public override void InitInference(ResourceSet resourceSet, float threshold)
     {
+        base.InitInference(resourceSet, threshold);
         shape = model.inputs[0].shape;
         width = shape[5];
         height = shape[6];
 
     }
-    public override BoundingBox[] RunInference(IWorker worker, RenderTexture source, float threshold)
+    public override BoundingBox[] RunInference(RenderTexture source)
     {
 
         var input = PreProcess(source);

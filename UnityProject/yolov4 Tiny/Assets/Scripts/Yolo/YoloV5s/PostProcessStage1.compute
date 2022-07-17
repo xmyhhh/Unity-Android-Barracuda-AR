@@ -1,0 +1,68 @@
+// Each #kernel tells which function to compile; you can have many kernels
+#pragma kernel CSMain
+struct BoundingBox
+{
+	float x;
+	float y;
+	float height;
+	float width;
+	float confidence;
+	uint classIndex;
+};
+
+struct sFloat
+{
+	float value;
+};
+
+
+uint classCount;
+float threshold;
+RWStructuredBuffer<sFloat> Input;
+AppendStructuredBuffer<BoundingBox> Output;
+
+[numthreads(100, 1, 1)]
+void CSMain(uint3 id : SV_DispatchThreadID)
+{
+	// Bounding box / confidence
+	uint indexRef = id.x;
+
+	float x = Input[indexRef].value;
+	float y = Input[indexRef + 1 * 6300].value;
+	float width = Input[indexRef + 2 * 6300].value;
+	float height = Input[indexRef + 3 * 6300].value;
+	float confidence = Input[indexRef + 4 * 6300].value;
+
+	//// ArgMax[SoftMax[classes]]
+	uint maxClass = 0;
+	float maxScore = Input[indexRef + 5  * 6300].value;
+
+	for (uint cidx = 1; cidx < classCount; cidx++)
+	{
+		float score = Input[indexRef + (5+ cidx) * 6300].value;
+		if (score > maxScore)
+		{
+			maxClass = cidx;
+			maxScore = score;
+		}
+	}
+
+	// Output structure
+	BoundingBox data;
+	data.x = x;
+	data.y = y;
+	data.height = height;
+	data.width = width;
+	data.classIndex = maxClass;
+	data.confidence = confidence;
+
+	// //Thresholding
+	if (data.confidence > threshold)
+	{
+		Output.Append(data);
+	}
+	
+}
+
+
+

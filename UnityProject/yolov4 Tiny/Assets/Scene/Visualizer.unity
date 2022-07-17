@@ -544,8 +544,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputTexture: {fileID: 8400000, guid: 2d6014420193a6f42a9ed5cc518ef72f, type: 2}
   threshold: 0.5
-  resourceSet: {fileID: 11400000, guid: efca97b895268554d80ad185156ceb00, type: 2}
-  inferenceDeviceType: 0
+  resourceSet: {fileID: 11400000, guid: 44b2d3c07e97b804e85209d44f003f58, type: 2}
+  inferenceDeviceType: 1
   preview: {fileID: 1088251496}
   markerPrefab: {fileID: 5927982192954204014, guid: 60564bd5cdc8546268601d4f7d6ed7cc, type: 3}
   FpsText: {fileID: 721262359}
@@ -563,7 +563,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rawImage: {fileID: 1088251496}
   output: {fileID: 8400000, guid: 2d6014420193a6f42a9ed5cc518ef72f, type: 2}
-  imageSourceType: 0
+  imageSourceType: 1
   image: {fileID: 2800000, guid: 2a0f3e7369affa64aa30258e528c82b1, type: 3}
 --- !u!1 &2117733124
 GameObject:
