@@ -2,18 +2,10 @@
 #pragma kernel CSMain
 
 
-StructuredBuffer<Detection> Input;
-RWStructuredBuffer<uint> InputCount; // Only used as a counter
-float Threshold;
-
-
-// Output
-AppendStructuredBuffer<Detection> Output;
-
 [numthreads(8,8,1)]
 void CSMain (uint3 id : SV_DispatchThreadID)
 {
     // TODO: insert actual code here!
 
-    Result[id.xy] = float4(id.x & id.y, (id.x & 15)/15.0, (id.y & 15)/15.0, 0.0);
+  
 }

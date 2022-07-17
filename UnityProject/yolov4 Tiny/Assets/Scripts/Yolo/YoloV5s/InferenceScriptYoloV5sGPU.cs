@@ -74,7 +74,6 @@ public class InferenceScriptYoloV5sGPU : InferenceScript
         }
         else
         {
-            TextureConverter.Texture2DToPNG(TextureConverter.RenderTextureToTexture2D(source));
 
             return TextureConverter.ToTensor(source);
         }

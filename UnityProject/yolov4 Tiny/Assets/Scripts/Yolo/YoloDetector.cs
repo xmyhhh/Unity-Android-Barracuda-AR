@@ -26,10 +26,6 @@ sealed class YoloDetector : MonoBehaviour
 
     Marker[] markers = new Marker[15];
 
-    Model model;
-    IWorker worker;
-
-    Tensor input;
     void Start()
     {
 
@@ -70,10 +66,6 @@ sealed class YoloDetector : MonoBehaviour
         }
         #endregion
 
-
-        //var output = worker.Execute(input).PeekOutput();
-
-
         var i = 0;
 
         foreach (var box in inferenceScript.RunInference(inputTexture))
@@ -85,37 +77,8 @@ sealed class YoloDetector : MonoBehaviour
         for (; i < markers.Length; i++) markers[i].Hide();
     }
 
-    IEnumerator InferenceCoroutine()
-    {
-        while (true)
-        {
-            // convert texture into Tensor of shape [1, imageToRecognise.height, imageToRecognise.width, 3]
-            using (var input = inferenceScript.PreProcess(inputTexture))
-            {
-                // execute neural network with specific input and get results back
-                var output = worker.Execute(input).PeekOutput();
-
-                //// allow main thread to run until neural network execution has finished
-                yield return new WaitForCompletion(output);
-
-                var predict = inferenceScript.PostProcess(output, threshold);
-
-
-                var i = 0;
-
-                foreach (var box in predict)
-                {
-                    if (i == markers.Length) break;
-                    markers[i++].SetAttributes(box);
-                }
-
-                for (; i < markers.Length; i++) markers[i].Hide();
-            }
-        }
-    }
-
     void OnDestroy()
     {
-        worker?.Dispose();
+        inferenceScript.DisposeObjects();
     }
 }
